@@ -56,7 +56,15 @@ function AboutLiving({ formData, setFormData }) {
       />
       <label for="omoblerad">Omöblerad</label>
       <label>Övrig information:</label>
-      <textarea rows="5" cols="40"></textarea>
+      <textarea
+        rows="5"
+        cols="40"
+        placeholder="Fin ustikt över dalen. Fiber är draget till lägenheten[...]"
+        value={formData.otherInfo}
+        onChange={(event) => {
+          setFormData({ ...formData, otherInfo: event.target.value });
+        }}
+      ></textarea>
     </div>
   );
 }
