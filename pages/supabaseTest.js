@@ -1,24 +1,22 @@
 import { supabase } from "../lib/initSupabase.js";
 import { useState } from "react";
 
-//const { data, error } = await supabase.from("posts").select("*");
-
 export default function supabaseTest() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const form = {
-      name: name,
-      email: email,
-    };
-
-    console.log(form);
-    const { data, error } = await supabase.from("users").insert([form]);
+    const { data, error } = await supabase.auth.signIn({ email });
+    console.log(supabase.auth.user());
 
     error ? console.log("error", error) : console.log("data", data);
+  };
+
+  const handleDelete = async (event) => {
+    await supabase.auth.api.deleteUser("8ced2995-30fa-498f-85d9-2260ad1f1167");
   };
 
   return (
@@ -31,6 +29,13 @@ export default function supabaseTest() {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        <input
+          type="password"
+          className=""
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
         <input
           type="text"
@@ -42,6 +47,8 @@ export default function supabaseTest() {
 
         <button className="">Submit</button>
       </form>
+
+      <button onClick={handleDelete}>Delete</button>
     </div>
   );
 }
