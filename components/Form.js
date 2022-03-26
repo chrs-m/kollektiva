@@ -23,7 +23,12 @@ function Form() {
     otherInfo: "",
   });
 
-  const FormTitles = ["Sign Up", "Personal Info", "About living", "Other"];
+  const FormTitles = [
+    "Skapa ett konto",
+    "Om dig",
+    "Om bostaden",
+    "Övrig information",
+  ];
 
   const PageDisplay = () => {
     if (page === 0) {
@@ -38,18 +43,29 @@ function Form() {
   };
 
   return (
-    <div className="form">
-      <div className="progress-bar">
+    <div className={styles.container}>
+      <div className={styles.progressBarContainer}>
         <div
-          style={{ width: page === 0 ? "33,3%" : page == 1 ? "66,6%" : "100%" }}
+          className={styles.progressBar}
+          style={{
+            width:
+              page === 0
+                ? "33,3%"
+                : page == 1
+                ? "66,6%"
+                : page == 2
+                ? "66,6%"
+                : "100%",
+          }}
         ></div>
-        <div className="form-container">
-          <div classname="header">
+        <div className={styles.formContainer}>
+          <div className={styles.header}>
             <h1>{FormTitles[page]}</h1>
           </div>
           <div classname="body">{PageDisplay()}</div>
-          <div classname="footer">
+          <div className={styles.buttons}>
             <button
+              className={styles.btn}
               disabled={page == 0}
               onClick={() => {
                 setPage((currentPage) => currentPage - 1);
@@ -58,6 +74,7 @@ function Form() {
               Previous
             </button>
             <button
+              className={styles.btn}
               //   disabled={page == FormTitles.length - 1}
               onClick={() => {
                 if (page === FormTitles.length - 1) {

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: rgba(grey, 0.8);
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 0rem;
+  padding: 0 60px;
+  height: 60px;
+  border: none;
+  width: 100%;
+  &:hover,
+  &:focus {
+    background-color: rgba(blue, 0.5);
+    color: white;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.progressBar {
+  background-color: rgba(blue, 0.5);
+  height: 0.5rem;
+  width: 200px;
+}
