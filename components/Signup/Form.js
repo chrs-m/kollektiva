@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from "../styles/Form.module.scss";
-import AboutLiving from "./AboutLiving";
-import OtherInfo from "./OtherInfo";
-import PersonalInfo from "./PersonalInfo";
-import SignUpInfo from "./SignUpInfo";
+import styles from "../../styles/Form.module.scss";
+import AboutLiving from "../Signup/AboutLiving";
+import OtherInfo from "../Signup/OtherInfo";
+import PersonalInfo from "../Signup/PersonalInfo";
+import SignUpInfo from "../Signup/SignUpInfo";
 
 function Form() {
   const [page, setPage] = useState(0);
@@ -71,7 +71,7 @@ function Form() {
                 setPage((currentPage) => currentPage - 1);
               }}
             >
-              Previous
+              Bakåt
             </button>
             <button
               className={styles.btn}
@@ -85,7 +85,7 @@ function Form() {
                 }
               }}
             >
-              {page === FormTitles.length - 1 ? "Submit" : "Next"}
+              {page === FormTitles.length - 1 ? "Skicka in" : "Nästa"}
             </button>
           </div>
         </div>

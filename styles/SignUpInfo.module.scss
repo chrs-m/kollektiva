@@ -7,6 +7,14 @@
 .form {
   display: flex;
   flex-direction: column;
+  a {
+    color: rgba(blue, 0.8);
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: rgba(blue, 0.5);
+  }
 }
 
 .label {
