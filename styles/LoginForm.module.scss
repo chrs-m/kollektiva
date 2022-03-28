@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .btn {
+    background-color: rgba(grey, 0.8);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5rem 0rem;
+    padding: 0 60px;
+    height: 60px;
+    border: none;
+    max-width: 100%;
+    &:hover,
+    &:focus {
+      background-color: rgba(blue, 0.5);
+      color: white;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 1rem;
+  }
+}

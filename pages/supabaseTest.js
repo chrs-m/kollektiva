@@ -6,35 +6,38 @@ export default function supabaseTest() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
 
-    const { data, error } = await supabase.auth.signIn({ email });
-    console.log(supabase.auth.user());
+    const form = {
+      name: name,
+      email: email,
+      password: password,
+    };
+
+    const { data, error } = await supabase.from("users").insert([form]);
+
+    // const { data, error } = await supabase.auth.signIn({ email });
+    // console.log(supabase.auth.user());
 
     error ? console.log("error", error) : console.log("data", data);
+
+    event.target.reset();
   };
 
   const handleDelete = async (event) => {
-    await supabase.auth.api.deleteUser("8ced2995-30fa-498f-85d9-2260ad1f1167");
+    await supabase.auth.api.deleteUser("");
   };
 
   return (
     <div className="">
-      <form className="" onSubmit={handleSubmit}>
+      <form className="" onSubmit={onSubmit}>
         <input
           type="text"
           className=""
           placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
-        <input
-          type="password"
-          className=""
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
         />
 
         <input
@@ -43,6 +46,14 @@ export default function supabaseTest() {
           placeholder="Your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          type="password"
+          className=""
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
         <button className="">Submit</button>

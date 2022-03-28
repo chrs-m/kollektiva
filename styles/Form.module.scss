@@ -5,15 +5,15 @@
 
 .btn {
   background-color: rgba(grey, 0.8);
-  font-size: 26px;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
   margin: 0.5rem 0rem;
   padding: 0 60px;
   height: 60px;
   border: none;
-  width: 100%;
+  max-width: 100%;
   &:hover,
   &:focus {
     background-color: rgba(blue, 0.5);

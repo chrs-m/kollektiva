@@ -62,7 +62,7 @@ function Form() {
           <div className={styles.header}>
             <h1>{FormTitles[page]}</h1>
           </div>
-          <div classname="body">{PageDisplay()}</div>
+          <div className={styles.body}>{PageDisplay()}</div>
           <div className={styles.buttons}>
             <button
               className={styles.btn}

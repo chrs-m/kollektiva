@@ -6,7 +6,7 @@ function PersonalInfo({ formData, setFormData }) {
     <div className={styles.container}>
       <h2>Lite mer om dig själv</h2>
       <form className={styles.form}>
-        <labael className={styles.label}>Namn</labael>
+        <label className={styles.label}>Namn</label>
         <input
           className={styles.input}
           type="text"
