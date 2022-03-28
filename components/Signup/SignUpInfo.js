@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/SignUpInfo.module.scss";
+import Link from "next/link";
 
 function SignUpInfo({ formData, setFormData }) {
   return (
@@ -48,7 +49,11 @@ function SignUpInfo({ formData, setFormData }) {
         />
         <div>
           <p>
-            Har du redan ett konto? <a href="/">Logga in in här!</a>
+            Har du redan ett konto?{" "}
+            <Link href="/login">
+              <a>Logga in här!</a>
+            </Link>
+            {/* <a href="/">Logga in in här!</a> */}
           </p>
         </div>
       </form>
