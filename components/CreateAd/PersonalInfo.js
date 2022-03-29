@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/PersonalInfo.module.scss";
+import styles from "../../styles/AdStyling/PersonalInfo.module.scss";
 
 function PersonalInfo({ formData, setFormData }) {
   return (
