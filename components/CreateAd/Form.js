@@ -1,17 +1,21 @@
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.scss";
-import AboutLiving from "../Signup/AboutLiving";
-import OtherInfo from "../Signup/OtherInfo";
-import PersonalInfo from "../Signup/PersonalInfo";
-import SignUpInfo from "../Signup/SignUpInfo";
+import About from "./About";
+import Extras from "./Extras";
+import LivingInfo from "./LivingInfo";
+import Price from "./Price";
+import Rentee from "./Rentee";
+import Summary from "./Summary";
+import TimePeriod from "./TimePeriod";
+import TypeOfLiving from "./TypeOfLiving";
 
 function Form() {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
+    // firstName: "",
+    // lastName: "",
+    // email: "",
+    // password: "",
     fullName: "",
     birthday: "",
     about: "",
@@ -24,40 +28,39 @@ function Form() {
   });
 
   const FormTitles = [
-    "Skapa ett konto",
-    "Om dig",
-    "Om bostaden",
-    "Övrig information",
+    "Hyr ut din bostad",
+    "Om ditt boende",
+    "Vilken typ av boende hyr du ut?",
+    "Hur många hyresgäster kan du ta emot?",
+    "Hur länge vill du hyra ut?",
+    "Bestäm ditt pris på hyran",
+    "Lägg till extra",
+    "Bekräfta att allt stämmer",
   ];
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <SignUpInfo formData={formData} setFormData={setFormData} />;
+      return <About formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
-      return <PersonalInfo formData={formData} setFormData={setFormData} />;
+      return <LivingInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 2) {
-      return <AboutLiving formData={formData} setFormData={setFormData} />;
+      return <TypeOfLiving formData={formData} setFormData={setFormData} />;
+    } else if (page === 3) {
+      return <Rentee formData={formData} setFormData={setFormData} />;
+    } else if (page === 4) {
+      return <TimePeriod formData={formData} setFormData={setFormData} />;
+    } else if (page === 5) {
+      return <Price formData={formData} setFormData={setFormData} />;
+    } else if (page === 6) {
+      return <Extras formData={formData} setFormData={setFormData} />;
     } else {
-      return <OtherInfo formData={formData} setFormData={setFormData} />;
+      return <Summary formData={formData} setFormData={setFormData} />;
     }
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.progressBarContainer}>
-        <div
-          className={styles.progressBar}
-          style={{
-            width:
-              page === 0
-                ? "33,3%"
-                : page == 1
-                ? "66,6%"
-                : page == 2
-                ? "66,6%"
-                : "100%",
-          }}
-        ></div>
         <div className={styles.formContainer}>
           <div className={styles.header}>
             <h1>{FormTitles[page]}</h1>

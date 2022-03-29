@@ -1,8 +1,14 @@
-import React from "react";
+import { React, useState } from "react";
 import styles from "../../styles/SignUpInfo.module.scss";
 import Link from "next/link";
 
-function SignUpInfo({ formData, setFormData }) {
+function SignUpInfo() {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
   return (
     <div className={styles.container}>
       <h2>Fyll i dina uppgifter</h2>
@@ -53,7 +59,6 @@ function SignUpInfo({ formData, setFormData }) {
             <Link href="/login">
               <a>Logga in här!</a>
             </Link>
-            {/* <a href="/">Logga in in här!</a> */}
           </p>
         </div>
       </form>
