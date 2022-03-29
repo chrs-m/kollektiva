@@ -28,8 +28,8 @@ function Form() {
   });
 
   const FormTitles = [
+    "About",
     "Hyr ut din bostad",
-    "Om ditt boende",
     "Vilken typ av boende hyr du ut?",
     "Hur många hyresgäster kan du ta emot?",
     "Hur länge vill du hyra ut?",
