@@ -10,19 +10,22 @@ export default function supabaseTest() {
     event.preventDefault();
 
     const form = {
-      name: name,
+      // name: name,
       email: email,
       password: password,
     };
 
-    const { data, error } = await supabase.from("users").insert([form]);
+    // const { data, error } = await supabase.from("users").insert([form]);
 
-    // const { data, error } = await supabase.auth.signIn({ email });
-    // console.log(supabase.auth.user());
+    const { data, error } = await supabase.auth.signIn({ ...form });
+    console.log(supabase.auth.user());
 
     error ? console.log("error", error) : console.log("data", data);
 
     event.target.reset();
+
+    setEmail("");
+    setPassword("");
   };
 
   const handleDelete = async (event) => {
@@ -32,13 +35,13 @@ export default function supabaseTest() {
   return (
     <div className="">
       <form className="" onSubmit={onSubmit}>
-        <input
+        {/* <input
           type="text"
           className=""
           placeholder="Your Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-        />
+        /> */}
 
         <input
           type="text"
