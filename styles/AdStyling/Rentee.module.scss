@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  .headline {
+    font-weight: bold;
+  }
+
+  .checkboxContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .checkboxes {
+      margin-top: 0.5rem;
+    }
+  }
+}

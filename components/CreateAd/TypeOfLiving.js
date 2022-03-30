@@ -14,23 +14,23 @@ function TypeOfLiving() {
           name="wholehouse"
           value="wholehouse"
         />
-        <label for="wholehouse">Hel bostad</label>
+        <label htmlFor="wholehouse">Hel bostad</label>
         <input type="checkbox" id="room" name="room" value="room" />
-        <label for="room">Rum i bostad</label>
+        <label htmlFor="room">Rum i bostad</label>
         <input
           type="checkbox"
           id="wholefloor"
           name="wholefloor"
           value="wholefloor"
         />
-        <label for="wholefloor">Egen våning</label>
+        <label htmlFor="wholefloor">Egen våning</label>
         <input
           type="checkbox"
           id="sharedplot"
           name="sharedplot"
           value="sharedplot"
         />
-        <label for="sharedplot">Bostad på delad tomt</label>
+        <label htmlFor="sharedplot">Bostad på delad tomt</label>
       </div>
     </div>
   );

@@ -19,12 +19,17 @@ function Form() {
     fullName: "",
     birthday: "",
     about: "",
+    address: "",
+    city: "",
+    zipCode: "",
     houseSize: "",
     fullHouse: "",
     roomInHouse: "",
     furnished: "",
     unFurnished: "",
     otherInfo: "",
+    adultCounter: 0,
+    childCounter: 0,
   });
 
   const FormTitles = [
