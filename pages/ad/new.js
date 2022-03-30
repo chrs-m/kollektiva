@@ -1,7 +1,7 @@
 import { React, useState } from "react";
-import Form from "../components/CreateAd/Form";
+import Form from "../../components/CreateAd/Form";
 
-function createad() {
+function newAd() {
   return (
     <div>
       <Form />
@@ -9,4 +9,4 @@ function createad() {
   );
 }
 
-export default createad;
+export default newAd;

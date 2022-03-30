@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "../../styles/AdStyling/LivingInfo.module.scss";
+import { useState } from "react";
 
 function LivingInfo({ formData, setFormData }) {
-  // let map;
+  const [wordCount, setWordCount] = useState(0);
 
-  // function initMap() {
-  //   map = new google.maps.Map(document.getElementById("map"), {
-  //     center: { lat: -34.397, lng: 150.644 },
-  //     zoom: 8,
-  //   });
+  const handleWordCount = (e) => {
+    const value = e.target.value;
+
+    setWordCount(value.length);
+  };
 
   return (
     <div className={styles.container}>
@@ -24,8 +25,9 @@ function LivingInfo({ formData, setFormData }) {
           rows="5"
           cols="40"
           placeholder="T.ex. Jag är en vänligen nybliven pensionär som älskar att dona i trädgården[...]"
+          onChange={(e) => handleWordCount(e)}
         ></textarea>
-        <small>50/500</small>
+        <small>{wordCount}/500</small>
         <h2>Vart ligger bostaden?</h2>
         <label>Adress</label>
         <input type="text" placeholder="Gibraltargatan 46"></input>
