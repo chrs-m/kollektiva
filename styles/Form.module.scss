@@ -1,6 +1,15 @@
 .container {
   display: flex;
   justify-content: center;
+  overflow: hidden;
+
+  .title {
+    padding-left: 2rem;
+  }
+}
+
+.formContainer {
+  width: 100vw;
 }
 
 .btn {

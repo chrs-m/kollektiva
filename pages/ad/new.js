@@ -1,10 +1,13 @@
 import { React, useState } from "react";
 import Form from "../../components/CreateAd/Form";
+import styles from "../../styles/NewAd.module.scss";
 
 function newAd() {
   return (
     <div>
-      <Form />
+      <div className={styles.header}>
+        <Form />
+      </div>
     </div>
   );
 }

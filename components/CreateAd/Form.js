@@ -32,6 +32,11 @@ function Form() {
     childCounter: 0,
   });
 
+  // handle field change
+  const handleChange = (input) => (e) => {
+    setFormData({ ...formData, [input]: e.target.value });
+  };
+
   const FormTitles = [
     "About",
     "Hyr ut din bostad",
@@ -47,9 +52,21 @@ function Form() {
     if (page === 0) {
       return <About formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
-      return <LivingInfo formData={formData} setFormData={setFormData} />;
+      return (
+        <LivingInfo
+          formData={formData}
+          setFormData={setFormData}
+          handleChange={handleChange}
+        />
+      );
     } else if (page === 2) {
-      return <TypeOfLiving formData={formData} setFormData={setFormData} />;
+      return (
+        <TypeOfLiving
+          formData={formData}
+          setFormData={setFormData}
+          handleChange={handleChange}
+        />
+      );
     } else if (page === 3) {
       return <Rentee formData={formData} setFormData={setFormData} />;
     } else if (page === 4) {
@@ -65,11 +82,9 @@ function Form() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.progressBarContainer}>
+      <div className={styles.header}>
+        <h1 className={styles.title}>{FormTitles[page]}</h1>
         <div className={styles.formContainer}>
-          <div className={styles.header}>
-            <h1>{FormTitles[page]}</h1>
-          </div>
           <div className={styles.body}>{PageDisplay()}</div>
           <div className={styles.buttons}>
             <button

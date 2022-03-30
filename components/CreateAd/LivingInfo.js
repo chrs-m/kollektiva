@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/AdStyling/LivingInfo.module.scss";
 import { useState } from "react";
 
-function LivingInfo({ formData, setFormData }) {
+function LivingInfo({ formData, setFormData, handleChange }) {
   const [wordCount, setWordCount] = useState(0);
 
   const handleWordCount = (e) => {
@@ -20,9 +20,7 @@ function LivingInfo({ formData, setFormData }) {
           type="text"
           placeholder="Agneta Andersson"
           value={formData.fullName}
-          onChange={(event) => {
-            setFormData({ ...formData, fullName: event.target.value });
-          }}
+          onChange={handleChange("fullName")}
         ></input>
         <label>Personnummer</label>
         <input
@@ -79,7 +77,7 @@ function LivingInfo({ formData, setFormData }) {
         allowfullscreen
         referrerpolicy="no-referrer-when-downgrade"
         src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAX9b1yiux3Nmf3U4ENOvOF9-cg3rbqhcs
-    &q=${formData.address}+${formData.city}+${formData.zipCode}`}
+    &q=${formData.address},+${formData.city},+${formData.zipCode}`}
       ></iframe>
     </div>
   );
