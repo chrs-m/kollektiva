@@ -30,6 +30,7 @@ function Form() {
     otherInfo: "",
     adultCounter: 0,
     childCounter: 0,
+    priceCounter: 2000,
   });
 
   // handle field change

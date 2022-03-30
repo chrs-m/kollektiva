@@ -7,6 +7,7 @@ function TypeOfLiving() {
       <label>Storlek på boende</label>
       <input type="number" placeholder="Skriv i antal kvm"></input>
       <h3>Klicka i de rutor som stämmer</h3>
+      {/* Göra om till radio-button? Så man bara har ett val och inte kan välja flera? */}
       <div>
         <input
           type="checkbox"
