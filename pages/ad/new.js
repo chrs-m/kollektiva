@@ -4,10 +4,9 @@ import styles from "../../styles/NewAd.module.scss";
 
 function newAd() {
   return (
-    <div>
-      <div className={styles.header}>
-        <Form />
-      </div>
+    <div className={styles.container}>
+      <div className={styles.header}></div>
+      <Form />
     </div>
   );
 }
