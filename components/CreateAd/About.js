@@ -7,11 +7,13 @@ function About({ formData, setFormData, handleChange }) {
       <div>
         <div className={styles.aboutWrapper}>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
-            sociis dictum semper fermentum tellus vitae sed.
+            <span>Hyr ut med kollektiva</span> - en tryggare uthyrning där vi
+            hjälper dig hela vägen
           </p>
-          <button className={styles.btn}>Lägg ut din bostad</button>
-          <button className={styles.btn}>Såhär fungerar det</button>
+          <div className={styles.infoButtons}>
+            <button className={styles.btn}>Lägg ut din bostad</button>
+            <button className={styles.btn}>Såhär fungerar det</button>
+          </div>
         </div>
         <div className={styles.calculateRentWrapper}>
           <h2>Räkna ut hyra för din bostad</h2>
@@ -40,11 +42,11 @@ function About({ formData, setFormData, handleChange }) {
             <option value="unfurnished">Omöblerad</option>
             <option value="furnished">Möblerad</option>
           </select>
-        </div>
-        <div className={styles.paymentWrapper}>
-          <h3>Ungefärlig hyra:</h3>
-          <p>3500-4500kr</p>
-          <button>Skapa bostadsannons</button>
+          <div className={styles.paymentWrapper}>
+            <h3>Ungefärlig hyra:</h3>
+            <p>3500-4500kr</p>
+            <button>Skapa bostadsannons</button>
+          </div>
         </div>
         <div>
           <h2>Att hyra ut med kollektiva</h2>

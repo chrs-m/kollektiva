@@ -1,6 +1,13 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
 .header {
-  background: #800080;
-  background: -webkit-linear-gradient(to right, #ffc0cb, #800080);
-  background: linear-gradient(to right, #ffc0cb, #800080);
-  height: 100vh;
+  background: #ff00cc;
+  background: -webkit-linear-gradient(to top, #333399, #ff00cc);
+  background: linear-gradient(to top, #333399, #ff00cc);
+
+  width: 50vw;
 }
