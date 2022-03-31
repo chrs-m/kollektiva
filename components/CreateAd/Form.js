@@ -30,7 +30,11 @@ function Form() {
     otherInfo: "",
     adultCounter: 0,
     childCounter: 0,
+    rentFrom: "",
+    rentTo: "",
     priceCounter: 2000,
+    adName: "",
+    adDescription: "",
   });
 
   // handle field change
@@ -45,7 +49,7 @@ function Form() {
     "Hur många hyresgäster kan du ta emot?",
     "Hur länge vill du hyra ut?",
     "Bestäm ditt pris på hyran",
-    "Lägg till extra",
+    "Slutför din annons genom att beskriva ditt boende och ladda upp bilder",
     "Bekräfta att allt stämmer",
   ];
 

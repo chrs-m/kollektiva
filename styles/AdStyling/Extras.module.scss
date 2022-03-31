@@ -1,0 +1,10 @@
+.picture-toggle--checked .picture-toggle-check {
+  opacity: 1;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+}
+.picture-toggle--checked .picture-toggle-uncheck {
+  opacity: 0;
+}
