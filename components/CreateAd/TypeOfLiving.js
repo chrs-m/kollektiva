@@ -9,29 +9,14 @@ function TypeOfLiving() {
       <h3>Klicka i de rutor som stämmer</h3>
       {/* Göra om till radio-button? Så man bara har ett val och inte kan välja flera? */}
       <div>
-        <input
-          type="checkbox"
-          id="wholehouse"
-          name="wholehouse"
-          value="wholehouse"
-        />
-        <label htmlFor="wholehouse">Hel bostad</label>
-        <input type="checkbox" id="room" name="room" value="room" />
+        <input type="radio" id="house" name="living" value="house" />
+        <label htmlFor="house">Hel bostad</label>
+        <input type="radio" id="room" name="living" value="room" />
         <label htmlFor="room">Rum i bostad</label>
-        <input
-          type="checkbox"
-          id="wholefloor"
-          name="wholefloor"
-          value="wholefloor"
-        />
-        <label htmlFor="wholefloor">Egen våning</label>
-        <input
-          type="checkbox"
-          id="sharedplot"
-          name="sharedplot"
-          value="sharedplot"
-        />
-        <label htmlFor="sharedplot">Bostad på delad tomt</label>
+        <input type="radio" id="floor" name="living" value="floor" />
+        <label htmlFor="floor">Egen våning i bostad</label>
+        <input type="radio" id="shared" name="living" value="shared" />
+        <label htmlFor="shared">Bostad på delad tomt</label>
       </div>
     </div>
   );

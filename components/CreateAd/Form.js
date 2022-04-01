@@ -84,38 +84,36 @@ function Form() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.titleWrapper}>
-          <h1 className={styles.title}>{FormTitles[page]}</h1>
-        </div>
-        <div className={styles.formContainer}>
-          <div className={styles.body}>
-            {PageDisplay()}
-            <div className={styles.buttons}>
-              <button
-                className={styles.btn}
-                disabled={page == 0}
-                onClick={() => {
-                  setPage((currentPage) => currentPage - 1);
-                }}
-              >
-                Bakåt
-              </button>
-              <button
-                className={styles.btn}
-                //   disabled={page == FormTitles.length - 1}
-                onClick={() => {
-                  if (page === FormTitles.length - 1) {
-                    alert("form submitted!");
-                    console.log(formData);
-                  } else {
-                    setPage((currentPage) => currentPage + 1);
-                  }
-                }}
-              >
-                {page === FormTitles.length - 1 ? "Skicka in" : "Nästa"}
-              </button>
-            </div>
-          </div>
+        {/* <div className={styles.titleWrapper}> */}
+        <h1 className={styles.title}>{FormTitles[page]}</h1>
+        {/* </div> */}
+      </div>
+      <div className={styles.formContainer}>
+        <div className={styles.body}>{PageDisplay()}</div>
+        <div className={styles.buttons}>
+          <button
+            className={styles.btnBack}
+            disabled={page == 0}
+            onClick={() => {
+              setPage((currentPage) => currentPage - 1);
+            }}
+          >
+            Tillbaka
+          </button>
+          <button
+            className={styles.btnNext}
+            //   disabled={page == FormTitles.length - 1}
+            onClick={() => {
+              if (page === FormTitles.length - 1) {
+                alert("form submitted!");
+                console.log(formData);
+              } else {
+                setPage((currentPage) => currentPage + 1);
+              }
+            }}
+          >
+            {page === FormTitles.length - 1 ? "Skicka in" : "Nästa"}
+          </button>
         </div>
       </div>
     </div>
