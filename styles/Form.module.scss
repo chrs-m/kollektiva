@@ -5,6 +5,9 @@
 }
 
 .container {
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
   background: #ff00cc;
   background: -webkit-linear-gradient(to top, #333399, #ff00cc);
   background: linear-gradient(to top, #333399, #ff00cc);
