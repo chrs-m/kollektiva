@@ -36,23 +36,23 @@ function Price({ formData, setFormData }) {
       <div className={styles.included}>
         <h2>Ingår el?</h2>
         <input type="radio" id="yes" name="electricity" value="yes" />
-        <label for="yes">Ja</label>
+        <label htmlFor="yes">Ja</label>
         <input type="radio" id="no" name="electricity" value="no" />
-        <label for="no">Nej</label>
+        <label htmlFor="no">Nej</label>
       </div>
       <div className={styles.included}>
         <h2>Ingår vatten?</h2>
         <input type="radio" id="yes" name="water" value="yes" />
-        <label for="yes">Ja</label>
+        <label htmlFor="yes">Ja</label>
         <input type="radio" id="no" name="water" value="no" />
-        <label for="no">Nej</label>
+        <label htmlFor="no">Nej</label>
       </div>
       <div className={styles.included}>
         <h2>Ingår hemförsäkring?</h2>
         <input type="radio" id="yes" name="incurance" value="yes" />
-        <label for="yes">Ja</label>
+        <label htmlFor="yes">Ja</label>
         <input type="radio" id="no" name="incurance" value="no" />
-        <label for="no">Nej</label>
+        <label htmlFor="no">Nej</label>
       </div>
     </div>
   );

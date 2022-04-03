@@ -74,8 +74,8 @@ function LivingInfo({ formData, setFormData, handleChange }) {
         height="450"
         style={{ border: 0 }}
         loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
         src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAX9b1yiux3Nmf3U4ENOvOF9-cg3rbqhcs
     &q=${formData.address},+${formData.city},+${formData.zipCode}`}
       ></iframe>

@@ -1,46 +1,102 @@
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 .container {
   padding-top: 70px;
   display: flex;
   align-items: center;
-
-  .titleWrapper {
+  background: #ff00cc;
+  background: -webkit-linear-gradient(to top, #333399, #ff00cc);
+  background: linear-gradient(to top, #333399, #ff00cc);
+  @include desktop {
     display: flex;
-    position: absolute;
-    left: 100px;
-    top: 50%;
-    width: 500px;
+    min-height: 100vh;
+  }
 
-    .title {
+  .header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop {
+      //Personligen tyckte jag det var snyggare med header 40% och form 60%, vi kan dubbelkolla mot slutet
+      width: 50%;
+      padding: 30px;
+      text-align: center;
+    }
+  }
+
+  .formContainer {
+    border-radius: 25px 25px 0 0;
+    background-color: lightgrey;
+
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+      width: 50%;
+      border-radius: 0;
+    }
+  }
+
+  .body {
+    padding: 20px;
+  }
+
+  .title {
+    color: white;
+    font-size: 1rem;
+
+    @include desktop {
       font-size: 2.5rem;
-      color: white;
       line-height: 3rem;
+      padding: 0 15px;
+      position: absolute;
+      top: 45%;
     }
   }
 }
 
-.btn {
+.btnNext {
   background-color: rgba(grey, 0.8);
   font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
   text-align: center;
   margin: 0.5rem 0rem;
-  padding: 0 60px;
-  height: 60px;
+  width: 160px;
+  height: 45px;
   border: none;
-  border-radius: 2rem;
+  border-radius: 8px;
   max-width: 100%;
   &:hover,
   &:focus {
-    background-color: rgba(blue, 0.5);
-    color: white;
+    background-color: #b4b4b4;
+    color: #000;
   }
 }
 
+.btnBack {
+  text-decoration: underline;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  width: 160px;
+  height: 45px;
+  margin: 0.5rem 0rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .buttons {
-  bottom: 10px;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
   display: flex;
-  justify-content: space-between;
-  width: 50vw;
-  padding: 1rem;
+  justify-content: space-around;
+  align-items: center;
 }
