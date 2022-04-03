@@ -60,6 +60,7 @@ $lg: 1200px;
       .PrimaryLinksWrapper {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
       }
       display: grid;
       grid-template-columns: repeat(3, auto);
@@ -77,13 +78,14 @@ $lg: 1200px;
       padding: 0rem 1rem;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
+      text-align: start;
     }
   }
 
   .NavLinksPrimary {
     font-size: 1.25rem;
     font-weight: bold;
-    padding: 1rem 1rem;
+    padding: 0.3rem 1rem;
     width: 100%;
     display: table;
     &:hover {
@@ -94,17 +96,23 @@ $lg: 1200px;
   }
 
   .NavLinks {
-    padding: 0.2em 1rem;
+    padding: 0.2rem 1rem;
     width: 100%;
     display: table;
+    text-align: start;
     &:hover {
       background-color: rgba(#0e5657, 1);
       color: white;
       border-radius: 1rem;
     }
+
+    @media (min-width: $md) {
+      padding: 0.4rem 1rem;
+    }
   }
 
   .NavbarLogo {
+    font-weight: bold;
     font-size: 2rem;
     color: black;
     position: absolute;

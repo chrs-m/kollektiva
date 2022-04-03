@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import Link from "next/link";
 import styles from "../../styles/Navbar/Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,11 +28,19 @@ function Navbar() {
 
   return (
     <nav className={styles.NavbarItems}>
-      <h1 className={styles.NavbarLogo}>Kollektiva</h1>
+      <Link href="/">
+        <a className={styles.NavbarLogo}>Kollektiva</a>
+      </Link>
+
       <div className={styles.MenuIcons}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
         <FontAwesomeIcon icon={faGlobe} />
-        <FontAwesomeIcon icon={faCircleUser} />
+        <Link href="/login">
+          <a>
+            <FontAwesomeIcon icon={faCircleUser} />
+          </a>
+        </Link>
+
         <FontAwesomeIcon
           onClick={handleClick}
           icon={state ? faXmark : faBars}
