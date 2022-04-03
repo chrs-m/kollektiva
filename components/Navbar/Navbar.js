@@ -39,35 +39,47 @@ function Navbar() {
       </div>
       <div className={styles.MenuWrapper}>
         <ul className={state ? styles.NavMenuActive : styles.NavMenu}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={styles.NavLinksPrimary} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
-          <p>Om oss</p>
-          {AboutUsSubMenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={styles.NavLinks} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
-          <p>Stöd</p>
-          {SupportSubMenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <a className={styles.NavLinks} href={item.url}>
-                  {item.title}
-                </a>
-              </li>
-            );
-          })}
+          <div className={styles.PrimaryLinksWrapper}>
+            {MenuItems.map((item, index) => {
+              return (
+                <div className={styles.PrimaryLinksWrapper}>
+                  <li key={index}>
+                    <a className={styles.NavLinksPrimary} href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                </div>
+              );
+            })}
+          </div>
+          <div className={state ? styles.SubMenuActive : styles.SubMenu}>
+            <div>
+              <p>Om oss</p>
+              {AboutUsSubMenuItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a className={styles.NavLinks} href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
+          <div className={state ? styles.SubMenuActive : styles.SubMenu}>
+            <div>
+              <p>Stöd</p>
+              {SupportSubMenuItems.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a className={styles.NavLinks} href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                );
+              })}
+            </div>
+          </div>
         </ul>
       </div>
     </nav>
