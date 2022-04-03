@@ -11,8 +11,6 @@ $lg: 1200px;
     padding: 0;
     margin: 0;
     background: rgba(white, 1);
-    // height: 80px;
-    font-size: 1.2rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -49,11 +47,11 @@ $lg: 1200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0;
+    padding: 1rem 0rem 0rem 1rem;
     width: 100vw;
     height: 500px;
     position: absolute;
-    // top: 80px;
+    top: 80px;
     left: 0;
     opacity: 1;
     list-style: none;
@@ -74,14 +72,16 @@ $lg: 1200px;
     }
 
     p {
+      font-size: 1.25rem;
       font-weight: bold;
       padding: 0rem 1rem;
       margin-bottom: 0.5rem;
+      margin-top: 1rem;
     }
   }
 
   .NavLinksPrimary {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     padding: 1rem 1rem;
     width: 100%;
@@ -105,11 +105,13 @@ $lg: 1200px;
   }
 
   .NavbarLogo {
+    font-size: 2rem;
     color: black;
     position: absolute;
     top: 0;
     left: 0;
     margin-left: 1rem;
+    padding: 1.5rem 1rem;
     @media (min-width: $md) {
       justify-self: start;
       margin-left: 1rem;
@@ -125,6 +127,7 @@ $lg: 1200px;
     position: absolute;
     top: 1.5rem;
     right: 1rem;
+    font-size: 1.3rem;
 
     svg {
       margin: 0 0.5rem;
