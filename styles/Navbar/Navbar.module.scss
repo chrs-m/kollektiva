@@ -1,8 +1,10 @@
 $sm: 400px;
 $md: 850px;
 $lg: 1200px;
+$primaryColor: #0e5657;
 
 .NavbarItems {
+  z-index: 99;
   display: flex;
   height: 80px;
   justify-content: center;
@@ -43,13 +45,14 @@ $lg: 1200px;
   }
 
   .NavMenuActive {
+    z-index: 99;
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0rem 0rem 1rem;
     width: 100vw;
-    height: 500px;
+    height: 100vh;
     position: absolute;
     top: 80px;
     left: 0;
@@ -66,10 +69,12 @@ $lg: 1200px;
       grid-template-columns: repeat(3, auto);
       grid-gap: 10px;
       list-style: none;
-      width: 70vw;
+      width: 100vw;
+      height: 50vh;
       justify-content: space-between;
       margin-right: 2rem;
       padding-top: 3rem;
+      padding-right: 30vw;
     }
 
     p {
@@ -89,7 +94,7 @@ $lg: 1200px;
     width: 100%;
     display: table;
     &:hover {
-      background-color: rgba(#0e5657, 1);
+      background-color: rgba($primaryColor, 1);
       color: white;
       border-radius: 1rem;
     }
@@ -101,7 +106,7 @@ $lg: 1200px;
     display: table;
     text-align: start;
     &:hover {
-      background-color: rgba(#0e5657, 1);
+      background-color: rgba($primaryColor, 1);
       color: white;
       border-radius: 1rem;
     }
@@ -126,7 +131,7 @@ $lg: 1200px;
       cursor: pointer;
     }
     &:hover {
-      color: #0e5657;
+      color: $primaryColor;
     }
   }
 
@@ -142,7 +147,7 @@ $lg: 1200px;
       cursor: pointer;
 
       &:hover {
-        color: #0e5657;
+        color: $primaryColor;
       }
     }
   }

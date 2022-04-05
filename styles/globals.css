@@ -15,3 +15,24 @@ a {
   box-sizing: border-box;
   margin: 0;
 }
+
+@font-face {
+  font-family: "GreyCliff";
+  src: url("../assets/fonts/GreycliffCF-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GreyCliff";
+  src: url("../assets/fonts/GreycliffCF-Medium.woff2");
+  font-weight: 500;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "GreyCliff";
+  src: url("../assets/fonts/GreycliffCF-Bold.woff2");
+  font-weight: 600;
+  font-style: bold;
+}
