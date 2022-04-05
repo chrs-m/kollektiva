@@ -73,20 +73,6 @@ $beigeColor: #f6ece3;
       width: 700px;
       top: 500px;
       left: calc(50% - 325px);
-      // .btn {
-      //   font-size: 1.5rem;
-      //   font-family: GreyCliff;
-      //   color: white;
-      //   background-color: $primaryColor;
-      //   padding: 1rem 4.5rem;
-      //   border: none;
-      //   border-radius: 2rem;
-      //   margin: 0rem 1.5rem;
-      //   &:hover {
-      //     background-color: black;
-      //     cursor: pointer;
-      //   }
-      // }
     }
   }
 
@@ -110,6 +96,7 @@ $beigeColor: #f6ece3;
     @media (min-width: $md) {
       display: flex;
       flex-direction: row;
+      padding: 4rem 0rem;
     }
 
     .InfoContainer {
@@ -159,7 +146,7 @@ $beigeColor: #f6ece3;
       flex-direction: row;
 
       .CityContainer {
-        background-color: gray;
+        color: white;
         width: 425px;
         height: 290px;
         margin: 2rem 2rem;
@@ -169,6 +156,28 @@ $beigeColor: #f6ece3;
           text-align: center;
           font-size: 2.2rem;
         }
+        &:hover {
+          filter: grayscale(1);
+          cursor: pointer;
+        }
+      }
+
+      .Sthlm {
+        background-image: url("../assets/img/sthlm.avif");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .Gbg {
+        background-image: url("../assets/img/gbg.avif");
+        background-position: center;
+        background-size: cover;
+      }
+
+      .Malmo {
+        background-image: url("../assets/img/malmoe.avif");
+        background-position: center;
+        background-size: cover;
       }
     }
     .btn {
@@ -195,33 +204,63 @@ $beigeColor: #f6ece3;
       flex-direction: row;
 
       .IndividualStoryContainer {
+        $curve: 1rem;
         background-color: #f5eeee;
         width: 425px;
-        height: 290px;
+        height: 390px;
         margin: 2rem 2rem;
-        padding: 0rem 2rem 3rem 2rem;
-        border-radius: 1rem;
+        // padding: 0rem 2rem 3rem 2rem;
+        border-radius: $curve;
 
         h3 {
           margin-top: 3rem;
           text-align: center;
           font-size: 2.2rem;
+          padding: 0rem 2rem 3rem 2rem;
+        }
+
+        p {
+          padding: 0rem 2rem;
         }
 
         .StoryImgContainer {
           width: 120px;
           height: 120px;
+          border: 5px solid $peachColor;
           border-radius: 100%;
-          background-image: url("../assets/img/old_woman_grey.avif");
+          transform: translate(130%, -60%);
+        }
+
+        .One {
+          background-image: url("../assets/img/old_woman.avif");
           background-position: center;
           background-size: cover;
-          transform: translate(100%, -60%);
+        }
+
+        .Two {
+          background-image: url("../assets/img/old_couple.avif");
+          background-position: center;
+          background-size: cover;
+        }
+
+        .Three {
+          background-image: url("../assets/img/woman_beach.avif");
+          background-position: center;
+          background-size: cover;
+        }
+
+        .Bottom {
+          width: 100%;
+          height: 80px;
+          background-color: $peachColor;
+          border-radius: 0px 0px $curve $curve;
         }
       }
     }
 
     .btn {
       margin-top: 5rem;
+      margin-bottom: 5rem;
     }
   }
 

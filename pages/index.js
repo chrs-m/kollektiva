@@ -75,13 +75,13 @@ export default function Home() {
       <div className={styles.LocationSection}>
         <h2>Lediga bostäder just nu</h2>
         <div className={styles.LocationContainers}>
-          <div className={styles.CityContainer}>
+          <div className={`${styles.CityContainer} ${styles.Sthlm}`}>
             <h3>Stockholm</h3>
           </div>
-          <div className={styles.CityContainer}>
+          <div className={`${styles.CityContainer} ${styles.Gbg}`}>
             <h3>Göteborg</h3>
           </div>
-          <div className={styles.CityContainer}>
+          <div className={`${styles.CityContainer} ${styles.Malmo}`}>
             <h3>Malmö</h3>
           </div>
         </div>
@@ -97,28 +97,33 @@ export default function Home() {
         <h2>Berättelser</h2>
         <div className={styles.StoryContainers}>
           <div className={styles.IndividualStoryContainer}>
-            <div className={styles.StoryImgContainer}></div>
+            <div className={`${styles.StoryImgContainer} ${styles.One}`}></div>
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
             </p>
             <h3>Elsa</h3>
+            <div className={styles.Bottom}></div>
           </div>
           <div className={styles.IndividualStoryContainer}>
-            <div className={styles.StoryImgContainer}></div>
+            <div className={`${styles.StoryImgContainer} ${styles.Two}`}></div>
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
             </p>
-            <h3>Maggan</h3>
+            <h3>Berit & Bertil</h3>
+            <div className={styles.Bottom}></div>
           </div>
           <div className={styles.IndividualStoryContainer}>
-            <div className={styles.StoryImgContainer}></div>
+            <div
+              className={`${styles.StoryImgContainer} ${styles.Three}`}
+            ></div>
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
             </p>
             <h3>Agneta</h3>
+            <div className={styles.Bottom}></div>
           </div>
         </div>
         <button className={styles.btn}>
