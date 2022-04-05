@@ -1,0 +1,155 @@
+$sm: 400px;
+$md: 850px;
+$lg: 1200px;
+
+.NavbarItems {
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: $md) {
+    padding: 0;
+    margin: 0;
+    background: rgba(white, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .NavMenu {
+    display: none;
+    color: black;
+    list-style: none;
+    background: rgba(white, 0.5);
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+
+    .PrimaryLinksWrapper {
+      display: flex;
+    }
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  .NavMenuActive {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0rem 0rem 1rem;
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    opacity: 1;
+    list-style: none;
+    transition: all 0.5s ease;
+    @media (min-width: $md) {
+      .PrimaryLinksWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 10px;
+      list-style: none;
+      width: 70vw;
+      justify-content: space-between;
+      margin-right: 2rem;
+      padding-top: 3rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: bold;
+      padding: 0rem 1rem;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+      text-align: start;
+    }
+  }
+
+  .NavLinksPrimary {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+    width: 100%;
+    display: table;
+    &:hover {
+      background-color: rgba(#0e5657, 1);
+      color: white;
+      border-radius: 1rem;
+    }
+  }
+
+  .NavLinks {
+    padding: 0.2rem 1rem;
+    width: 100%;
+    display: table;
+    text-align: start;
+    &:hover {
+      background-color: rgba(#0e5657, 1);
+      color: white;
+      border-radius: 1rem;
+    }
+
+    @media (min-width: $md) {
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  .NavbarLogo {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    padding: 1.5rem 1rem;
+    @media (min-width: $md) {
+      justify-self: start;
+      margin-left: 1rem;
+      cursor: pointer;
+    }
+    &:hover {
+      color: #0e5657;
+    }
+  }
+
+  .MenuIcons {
+    display: flex;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 1.3rem;
+
+    svg {
+      margin: 0 0.5rem;
+      cursor: pointer;
+
+      &:hover {
+        color: #0e5657;
+      }
+    }
+  }
+
+  .SubMenu {
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+}
