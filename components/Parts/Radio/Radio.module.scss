@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 10px;
+}
+
+.radio {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid var(--button-border);
+}

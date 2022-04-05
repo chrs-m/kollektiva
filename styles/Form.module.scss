@@ -5,12 +5,8 @@
 }
 
 .container {
-
   background: var(--header);
-  padding-top: 70px;
-  display: flex;
-  align-items: center;
- 
+
   @include desktop {
     display: flex;
     min-height: 100vh;
