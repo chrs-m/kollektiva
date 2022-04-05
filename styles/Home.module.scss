@@ -172,6 +172,55 @@ $beigeColor: #f6ece3;
       }
     }
     .btn {
+      margin: 5rem;
+    }
+  }
+
+  .StorySection {
+    @media (min-width: $md) {
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      padding: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 8rem;
+    }
+
+    .StoryContainers {
+      display: flex;
+      flex-direction: row;
+
+      .IndividualStoryContainer {
+        background-color: #f5eeee;
+        width: 425px;
+        height: 290px;
+        margin: 2rem 2rem;
+        padding: 0rem 2rem 3rem 2rem;
+        border-radius: 1rem;
+
+        h3 {
+          margin-top: 3rem;
+          text-align: center;
+          font-size: 2.2rem;
+        }
+
+        .StoryImgContainer {
+          width: 120px;
+          height: 120px;
+          border-radius: 100%;
+          background-image: url("../assets/img/old_woman_grey.avif");
+          background-position: center;
+          background-size: cover;
+          transform: translate(100%, -60%);
+        }
+      }
+    }
+
+    .btn {
       margin-top: 5rem;
     }
   }

@@ -34,6 +34,7 @@ export default function Home() {
         <FontAwesomeIcon icon={faArrowDown} className={styles.DownArrow} />
       </div>
 
+      {/* MAIN SECTION STARTS HERE */}
       <div className={styles.MainSection}>
         <div className={styles.InfoContainer}>
           <FontAwesomeIcon
@@ -69,6 +70,8 @@ export default function Home() {
           </p>
         </div>
       </div>
+
+      {/* LOCATION SECTION STARTS HERE */}
       <div className={styles.LocationSection}>
         <h2>Lediga bostäder just nu</h2>
         <div className={styles.LocationContainers}>
@@ -85,6 +88,42 @@ export default function Home() {
         <button className={styles.btn}>
           <Link href="#">
             <a>Hitta lediga bostäder</a>
+          </Link>
+        </button>
+      </div>
+
+      {/* STORY SECTION STARTS HERE */}
+      <div className={styles.StorySection}>
+        <h2>Berättelser</h2>
+        <div className={styles.StoryContainers}>
+          <div className={styles.IndividualStoryContainer}>
+            <div className={styles.StoryImgContainer}></div>
+            <p>
+              “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
+              Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
+            </p>
+            <h3>Elsa</h3>
+          </div>
+          <div className={styles.IndividualStoryContainer}>
+            <div className={styles.StoryImgContainer}></div>
+            <p>
+              “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
+              Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
+            </p>
+            <h3>Maggan</h3>
+          </div>
+          <div className={styles.IndividualStoryContainer}>
+            <div className={styles.StoryImgContainer}></div>
+            <p>
+              “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
+              Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
+            </p>
+            <h3>Agneta</h3>
+          </div>
+        </div>
+        <button className={styles.btn}>
+          <Link href="#">
+            <a>Läs fler berättelser</a>
           </Link>
         </button>
       </div>
