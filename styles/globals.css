@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Greycliff";
+  src: url(../assets/fonts/greycliff.woff2);
+}
+
+:root {
+  --header: #f6ece3;
+  --container: #fdfaf8;
+  --input-button: #f4a491;
+  --button-border: #0e5657;
+}
+
 html,
 body {
   padding: 0;
@@ -14,4 +26,5 @@ a {
 * {
   box-sizing: border-box;
   margin: 0;
+  /* font-family: "Greycliff"; */
 }
