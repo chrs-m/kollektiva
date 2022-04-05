@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.scss";
-import Nav from "../Nav/Nav";
+import Navbar from "../Navbar/Navbar";
 import About from "./About";
 import Extras from "./Extras";
 import LivingInfo from "./LivingInfo";
@@ -84,7 +84,7 @@ function Form() {
 
   return (
     <div className={styles.container}>
-      <Nav />
+      <Navbar />
       <div className={styles.header}>
         {/* <div className={styles.titleWrapper}> */}
         <h1 className={styles.title}>{FormTitles[page]}</h1>

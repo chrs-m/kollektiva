@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import Form from "../../components/CreateAd/Form";
-import Nav from "../../components/Nav/Nav";
+import Navbar from "../../components/Navbar/Navbar";
 import styles from "../../styles/NewAd.module.scss";
 
 function newAd() {
