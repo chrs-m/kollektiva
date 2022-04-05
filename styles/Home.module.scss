@@ -1,5 +1,5 @@
-$sm: 400px;
-$md: 850px;
+$sm: 350px;
+$md: 830px;
 $lg: 1200px;
 $primaryColor: #0e5657;
 $peachColor: #f88e75;
@@ -9,16 +9,27 @@ $beigeColor: #f6ece3;
   font-family: GreyCliff;
   // margin-top: 80px;
   overflow: hidden;
+  width: 100vw;
 
   .btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: GreyCliff;
     color: white;
     background-color: $primaryColor;
     padding: 1rem 4.5rem;
     border: none;
     border-radius: 2rem;
-    margin: 0rem 1.5rem;
+    // margin: 0rem 1.5rem;
+    @media (min-width: $md) {
+      font-size: 1.5rem;
+      font-family: GreyCliff;
+      color: white;
+      background-color: $primaryColor;
+      padding: 1rem 4.5rem;
+      border: none;
+      border-radius: 2rem;
+      margin: 0rem 1.5rem;
+    }
     &:hover {
       background-color: black;
       cursor: pointer;
@@ -36,59 +47,90 @@ $beigeColor: #f6ece3;
       width: 100vw;
       background-position: center;
     }
-    :nth-child(1) {
-      width: 100%;
-      height: 100%;
+    .BackgroundImage {
       background-color: black; /* fallback color */
       background-image: url("../assets/img/header_image.avif");
       background-position: center;
       background-size: cover;
       transform: scale(1);
-      filter: blur(2px);
+      filter: blur(1px);
+      height: 80vh;
+      @media (min-width: $md) {
+        width: 100%;
+        height: 100%;
+        filter: blur(1px);
+      }
     }
   }
 
   .Title {
-    font-size: 3.5rem;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 2rem;
+    top: 200px;
+    width: 380px;
+    left: calc(50% - 190px);
+
     @media (min-width: $md) {
+      font-size: 3.5rem;
       z-index: 2;
       position: absolute;
       width: 650px;
       top: 250px;
       left: calc(50% - 325px);
       color: black;
-      span {
+    }
+
+    span {
+      font-weight: normal;
+      font-size: 1.3rem;
+      @media (min-width: $md) {
         font-size: 2.5rem;
-        font-weight: normal;
+        // font-weight: normal;
       }
     }
   }
 
   .BtnsContainer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 350px;
+    left: calc(50% - 135px);
+
     @media (min-width: $md) {
-      position: absolute;
+      display: block;
       width: 700px;
       top: 500px;
       left: calc(50% - 325px);
     }
+
+    .btn {
+      margin: 1rem;
+    }
   }
 
   .ArrowContainer {
+    transform: translate(calc(50vw - 2.7rem), -2.5rem);
+
     @media (min-width: $md) {
       transform: translate(calc(50vw - 4rem), -2.5rem);
       // mix-blend-mode: multiply;
     }
     .DownArrow {
-      font-size: 3rem;
+      font-size: 1.5rem;
       background-color: $peachColor;
-      padding: 1rem 1.4rem;
+      padding: 1.3rem 1.5rem;
       border-radius: 100%;
       color: white;
       mix-blend-mode: multiply;
       animation: bounce2 2s ease infinite;
+
+      @media (min-width: $md) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -104,10 +146,13 @@ $beigeColor: #f6ece3;
       margin: 2rem 2rem;
       padding: 2rem;
       border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       @media (min-width: $md) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
       }
 
       .HouseChimney {
@@ -137,8 +182,14 @@ $beigeColor: #f6ece3;
     }
 
     h2 {
-      padding: 2.5rem;
-      font-size: 3rem;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.75rem;
+      font-weight: normal;
+      @media (min-width: $md) {
+        padding: 2.5rem;
+        font-size: 3rem;
+      }
     }
 
     .LocationContainers {
@@ -180,8 +231,21 @@ $beigeColor: #f6ece3;
         background-size: cover;
       }
     }
-    .btn {
-      margin: 5rem;
+
+    .BtnContainer {
+      width: 100vw;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+
+      .btn {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+
+        @media (min-width: $md) {
+          margin: 5rem;
+        }
+      }
     }
   }
 
@@ -193,15 +257,42 @@ $beigeColor: #f6ece3;
       align-items: center;
     }
 
-    h2 {
-      padding: 2.5rem;
-      font-size: 3rem;
-      margin-bottom: 8rem;
+    .StoryTitle {
+      width: 100vw;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      margin-top: 3rem;
+      margin-bottom: 6.5rem;
+
+      h2 {
+        font-size: 2rem;
+        @media (min-width: $md) {
+          padding: 2.5rem;
+          font-size: 3rem;
+          margin-bottom: 8rem;
+        }
+      }
     }
 
     .StoryContainers {
       display: flex;
       flex-direction: row;
+      justify-content: center;
+
+      .StoryTwo {
+        display: none;
+        @media (min-width: $md) {
+          display: block;
+        }
+      }
+
+      .StoryThree {
+        display: none;
+        @media (min-width: $md) {
+          display: block;
+        }
+      }
 
       .IndividualStoryContainer {
         $curve: 1rem;
@@ -223,30 +314,51 @@ $beigeColor: #f6ece3;
           padding: 0rem 2rem;
         }
 
+        .ImgWrapper {
+          height: fit-content;
+          display: flex;
+          justify-content: center;
+        }
+
         .StoryImgContainer {
           width: 120px;
           height: 120px;
           border: 5px solid $peachColor;
           border-radius: 100%;
-          transform: translate(130%, -60%);
+          transform: translateY(-60%);
+          @media (min-width: $md) {
+            border-radius: 100%;
+            // transform: translate(130%, -60%);
+          }
+          // @media (min-width: $sm) {
+          //   transform: translate(90%, -60%);
+          // }
         }
 
-        .One {
+        .ImgOne {
           background-image: url("../assets/img/old_woman.avif");
           background-position: center;
           background-size: cover;
         }
 
-        .Two {
-          background-image: url("../assets/img/old_couple.avif");
-          background-position: center;
-          background-size: cover;
+        .ImgTwo {
+          display: none;
+          @media (min-width: $md) {
+            display: block;
+            background-image: url("../assets/img/old_couple.avif");
+            background-position: center;
+            background-size: cover;
+          }
         }
 
-        .Three {
-          background-image: url("../assets/img/woman_beach.avif");
-          background-position: center;
-          background-size: cover;
+        .ImgThree {
+          display: none;
+          @media (min-width: $md) {
+            display: block;
+            background-image: url("../assets/img/woman_beach.avif");
+            background-position: center;
+            background-size: cover;
+          }
         }
 
         .Bottom {
@@ -258,9 +370,15 @@ $beigeColor: #f6ece3;
       }
     }
 
-    .btn {
-      margin-top: 5rem;
-      margin-bottom: 5rem;
+    .StoryBtnContainer {
+      width: 100vw;
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      .btn {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
     }
   }
 

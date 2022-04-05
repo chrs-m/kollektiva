@@ -85,19 +85,29 @@ export default function Home() {
             <h3>Malmö</h3>
           </div>
         </div>
-        <button className={styles.btn}>
-          <Link href="#">
-            <a>Hitta lediga bostäder</a>
-          </Link>
-        </button>
+        <div className={styles.BtnContainer}>
+          <button className={styles.btn}>
+            <Link href="#">
+              <a>Hitta lediga bostäder</a>
+            </Link>
+          </button>
+        </div>
       </div>
 
       {/* STORY SECTION STARTS HERE */}
       <div className={styles.StorySection}>
-        <h2>Berättelser</h2>
+        <div className={styles.StoryTitle}>
+          <h2>Berättelser</h2>
+        </div>
         <div className={styles.StoryContainers}>
-          <div className={styles.IndividualStoryContainer}>
-            <div className={`${styles.StoryImgContainer} ${styles.One}`}></div>
+          <div
+            className={`${styles.IndividualStoryContainer} ${styles.StoryOne}`}
+          >
+            <div className={styles.ImgWrapper}>
+              <div
+                className={`${styles.StoryImgContainer} ${styles.ImgOne}`}
+              ></div>
+            </div>
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
@@ -105,8 +115,14 @@ export default function Home() {
             <h3>Elsa</h3>
             <div className={styles.Bottom}></div>
           </div>
-          <div className={styles.IndividualStoryContainer}>
-            <div className={`${styles.StoryImgContainer} ${styles.Two}`}></div>
+          <div
+            className={`${styles.IndividualStoryContainer} ${styles.StoryTwo}`}
+          >
+            <div className={styles.ImgWrapper}>
+              <div
+                className={`${styles.StoryImgContainer} ${styles.ImgTwo}`}
+              ></div>
+            </div>
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
@@ -114,10 +130,15 @@ export default function Home() {
             <h3>Berit & Bertil</h3>
             <div className={styles.Bottom}></div>
           </div>
-          <div className={styles.IndividualStoryContainer}>
-            <div
-              className={`${styles.StoryImgContainer} ${styles.Three}`}
-            ></div>
+          <div
+            className={`${styles.IndividualStoryContainer} ${styles.StoryThree}`}
+          >
+            <div className={styles.ImgWrapper}>
+              <div
+                className={`${styles.StoryImgContainer} ${styles.ImgThree}`}
+              ></div>
+            </div>
+
             <p>
               “När jag hyr ut min bostad vill jag att det ska kännas tryggt. Med
               Kollektiva behöver jag inte vara orolig för att något ska gå fel.”
@@ -126,11 +147,13 @@ export default function Home() {
             <div className={styles.Bottom}></div>
           </div>
         </div>
-        <button className={styles.btn}>
-          <Link href="#">
-            <a>Läs fler berättelser</a>
-          </Link>
-        </button>
+        <div className={styles.StoryBtnContainer}>
+          <button className={styles.btn}>
+            <Link href="#">
+              <a>Läs fler berättelser</a>
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   );
