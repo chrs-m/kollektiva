@@ -30,7 +30,9 @@ export default function Home() {
           </Link>
         </button>
       </div>
-      <FontAwesomeIcon icon={faArrowDown} className={styles.DownArrow} />
+      <div className={styles.ArrowContainer}>
+        <FontAwesomeIcon icon={faArrowDown} className={styles.DownArrow} />
+      </div>
 
       <div className={styles.MainSection}>
         <div className={styles.InfoContainer}>
@@ -66,6 +68,25 @@ export default function Home() {
             hyresvärd/hryesgäst skall känna dig trygg under hela processen.
           </p>
         </div>
+      </div>
+      <div className={styles.LocationSection}>
+        <h2>Lediga bostäder just nu</h2>
+        <div className={styles.LocationContainers}>
+          <div className={styles.CityContainer}>
+            <h3>Stockholm</h3>
+          </div>
+          <div className={styles.CityContainer}>
+            <h3>Göteborg</h3>
+          </div>
+          <div className={styles.CityContainer}>
+            <h3>Malmö</h3>
+          </div>
+        </div>
+        <button className={styles.btn}>
+          <Link href="#">
+            <a>Hitta lediga bostäder</a>
+          </Link>
+        </button>
       </div>
     </div>
   );
