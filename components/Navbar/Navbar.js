@@ -3,7 +3,6 @@ import Link from "next/link";
 import styles from "../../styles/Navbar/Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHome,
   faBars,
   faXmark,
   faMagnifyingGlass,
@@ -18,11 +17,9 @@ import {
 } from "./MenuItems";
 
 function Navbar() {
-  // [variableName/value, function/setter] = useState(defalt vaule)
   const [state, setState] = useState(false);
 
   const handleClick = () => {
-    //toggles between states (true/false)
     setState(!state);
   };
 
