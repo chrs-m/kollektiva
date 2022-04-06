@@ -1,3 +1,9 @@
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
 .buttonContainer {
   width: 140px;
   height: 94px;
@@ -10,4 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include desktop {
+    width: 180px;
+    height: 110px;
+  }
 }

@@ -6,6 +6,7 @@ import styles from "../../styles/NewAd.module.scss";
 function newAd() {
   return (
     <div className={styles.container}>
+      <Navbar />
       <div className={styles.header}></div>
       <Form />
     </div>
