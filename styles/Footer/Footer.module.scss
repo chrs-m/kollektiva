@@ -1,0 +1,54 @@
+$sm: 350px;
+$md: 830px;
+$lg: 1200px;
+$primaryColor: #0e5657;
+$peachColor: #f88e75;
+$beigeColor: #f6ece3;
+
+.Container {
+  background-color: $primaryColor;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+    height: 225px;
+    width: 100vw;
+  }
+
+  .IconsContainer {
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 2rem;
+    @media (min-width: $md) {
+      flex-direction: row;
+      gap: 2rem;
+      margin-top: 0;
+    }
+  }
+
+  .ContactInformationContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    @media (min-width: $md) {
+      flex-direction: row;
+      margin-left: 8rem;
+      margin-top: 0;
+      gap: 5rem;
+    }
+  }
+
+  .Contact {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.3rem;
+    @media (min-width: $md) {
+    }
+  }
+}
