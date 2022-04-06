@@ -1,20 +1,24 @@
 .container {
   display: flex;
   flex-direction: column;
-}
 
-.form {
-  display: flex;
-  flex-direction: column;
-  .headline {
-    font-weight: bold;
+  .GoogleInput {
+    width: 100%;
+    border-radius: 10px;
+    height: 45px;
+    margin: 10px 0 20px 0;
+    border: 2px solid var(--button-border);
+    padding: 8px;
+    font-family: "Greycliff";
   }
 
-  .checkboxContainer {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    .checkboxes {
-      margin-top: 0.5rem;
-    }
+  h2 {
+    margin: 2rem 0rem 1rem 0rem;
+  }
+
+  iframe {
+    margin-bottom: 2.5rem;
+    // width: 300px;
+    // height: 250px;
   }
 }

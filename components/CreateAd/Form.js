@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.scss";
-import Navbar from "../Navbar/Navbar";
 import About from "./About";
 import Extras from "./Extras";
 import LivingInfo from "./LivingInfo";
@@ -86,7 +85,6 @@ function Form() {
 
   return (
     <div className={styles.container}>
-      <Navbar />
       <div className={styles.animation}>
         <div className={styles.header}>
           {/* <div className={styles.titleWrapper}> */}

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../styles/AdStyling/LivingInfo.module.scss";
-import { useState } from "react";
+import Textarea from "../Parts/Textarea";
+import Input from "../Parts/Input";
 
 function LivingInfo({ formData, setFormData, handleChange }) {
   const [wordCount, setWordCount] = useState(0);
@@ -16,33 +17,37 @@ function LivingInfo({ formData, setFormData, handleChange }) {
       <div className={styles.wrapper}>
         <h2>Fyll i följande uppgifter om dig själv</h2>
         <label>Namn</label>
-        <input
+        <Input placeholder="Fyll i ditt namn här" />
+        {/* <input
           type="text"
           placeholder="Agneta Andersson"
           value={formData.fullName}
           onChange={handleChange("fullName")}
-        ></input>
+        ></input> */}
         <label>Personnummer</label>
-        <input
+        <Input placeholder="1950-01-01" />
+        {/* <input
           type="number"
           placeholder="1900-01-01-1234"
           value={formData.birthday}
           onChange={(event) => {
             setFormData({ ...formData, birthday: event.target.value });
           }}
-        ></input>
+        ></input> */}
         <label>Kort beskrivning av dig sjäv</label>
-        <textarea
+        <Textarea placeholder="T.ex. Jag är en vänligen nybliven pensionär som älskar att dona i trädgården[...]" />
+        {/* <textarea
           className={styles.textarea}
           rows="5"
           cols="40"
           placeholder="T.ex. Jag är en vänligen nybliven pensionär som älskar att dona i trädgården[...]"
           onChange={(e) => handleWordCount(e)}
-        ></textarea>
+        ></textarea> */}
         <small>{wordCount}/500</small>
         <h2>Vart ligger bostaden?</h2>
         <label>Adress</label>
         <input
+          className={styles.GoogleInput}
           type="text"
           placeholder="Gibraltargatan 46"
           value={formData.address}
@@ -52,6 +57,7 @@ function LivingInfo({ formData, setFormData, handleChange }) {
         ></input>
         <label>Ort</label>
         <input
+          className={styles.GoogleInput}
           type="text"
           placeholder="Göteborg"
           value={formData.city}
@@ -61,6 +67,7 @@ function LivingInfo({ formData, setFormData, handleChange }) {
         ></input>
         <label>Postnummer</label>
         <input
+          className={styles.GoogleInput}
           type="number"
           placeholder="412 80"
           value={formData.zipCode}
@@ -70,8 +77,6 @@ function LivingInfo({ formData, setFormData, handleChange }) {
         ></input>
       </div>
       <iframe
-        width="600"
-        height="450"
         style={{ border: 0 }}
         loading="lazy"
         allowFullScreen
