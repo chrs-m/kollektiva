@@ -46,7 +46,8 @@
 
 .titleContainer {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 30px;
   align-items: center;
   height: 80px;
   @include desktop {

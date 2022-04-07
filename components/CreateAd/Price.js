@@ -1,5 +1,7 @@
 import { React, useState } from "react";
 import styles from "../../styles/AdStyling/Price.module.scss";
+import Input from "../../components/Parts/Input";
+import Radio from "../Parts/Radio";
 
 function Price({ formData, setFormData }) {
   const [counter, setCounter] = useState(2000);
@@ -8,51 +10,89 @@ function Price({ formData, setFormData }) {
     <div className={styles.container}>
       <h2>
         Baserat på inlagd information är rekommenderad hyra för ditt boende
-        7500kr i månaden
+        <span> 7500kr</span> i månaden
       </h2>
-      <button
-        className="bg-slate-300 hover:bg-slate-400 rounded-md mt-10 px-2 hover:shadow-md"
-        onClick={() => {
-          formData.priceCounter += 500;
-          setFormData({ ...formData });
-        }}
-      >
-        +
-      </button>
-      <h1 className="text-white text-xl text-center mt-2">
-        {formData["priceCounter"]}
-      </h1>
-      <button
-        className="bg-slate-300 hover:bg-slate-400 rounded-md mt-10 px-2 hover:shadow-md"
-        onClick={() => {
-          if (formData.priceCounter > 2000) {
-            formData.priceCounter -= 500;
+      <div className={styles.PriceContainer}>
+        <button
+          className={styles.btn}
+          onClick={() => {
+            if (formData.priceCounter > 2000) {
+              formData.priceCounter -= 500;
+              setFormData({ ...formData });
+            }
+          }}
+        >
+          -
+        </button>
+
+        {/* <h1 className="">{formData["priceCounter"]}</h1> */}
+        <Input placeholder={"7500kr"} />
+        <button
+          className={styles.btn}
+          onClick={() => {
+            formData.priceCounter += 500;
             setFormData({ ...formData });
-          }
-        }}
-      >
-        -
-      </button>
+          }}
+        >
+          +
+        </button>
+      </div>
       <div className={styles.included}>
         <h2>Ingår el?</h2>
-        <input type="radio" id="yes" name="electricity" value="yes" />
-        <label htmlFor="yes">Ja</label>
-        <input type="radio" id="no" name="electricity" value="no" />
-        <label htmlFor="no">Nej</label>
+        <Radio
+          type="radio"
+          id="yes"
+          name="electricity"
+          value="yes"
+          for="yes"
+          text="Ja"
+        />
+        <Radio
+          type="radio"
+          id="yes"
+          name="electricity"
+          value="yes"
+          for="no"
+          text="Nej"
+        />
       </div>
       <div className={styles.included}>
         <h2>Ingår vatten?</h2>
-        <input type="radio" id="yes" name="water" value="yes" />
-        <label htmlFor="yes">Ja</label>
-        <input type="radio" id="no" name="water" value="no" />
-        <label htmlFor="no">Nej</label>
+        <Radio
+          type="radio"
+          id="yes"
+          name="water"
+          value="yes"
+          for="yes"
+          text="Ja"
+        />
+        <Radio
+          type="radio"
+          id="yes"
+          name="water"
+          value="yes"
+          for="no"
+          text="Nej"
+        />
       </div>
       <div className={styles.included}>
         <h2>Ingår hemförsäkring?</h2>
-        <input type="radio" id="yes" name="incurance" value="yes" />
-        <label htmlFor="yes">Ja</label>
-        <input type="radio" id="no" name="incurance" value="no" />
-        <label htmlFor="no">Nej</label>
+        <Radio
+          type="radio"
+          id="yes"
+          name="insurance"
+          value="yes"
+          for="yes"
+          text="Ja"
+        />
+        <Radio
+          type="radio"
+          id="yes"
+          name="insurance"
+          value="yes"
+          for="no"
+          text="Nej"
+        />
       </div>
     </div>
   );
