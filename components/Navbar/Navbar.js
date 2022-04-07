@@ -48,8 +48,8 @@ function Navbar() {
           <div className={styles.PrimaryLinksWrapper}>
             {MenuItems.map((item, index) => {
               return (
-                <div className={styles.PrimaryLinksWrapper}>
-                  <li key={index}>
+                <div key={index} className={styles.PrimaryLinksWrapper}>
+                  <li>
                     <a className={styles.NavLinksPrimary} href={item.url}>
                       {item.title}
                     </a>
