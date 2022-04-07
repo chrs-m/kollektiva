@@ -1,29 +1,46 @@
+$sm: 350px;
+$md: 830px;
+$lg: 1200px;
+$primaryColor: #0e5657;
+$peachColor: #f88e75;
+$beigeColor: #f6ece3;
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  margin-top: 100px;
+
+  form {
+    height: 100%;
+  }
+  label {
+    font-weight: bold;
+  }
+
+  input {
+    margin: 0.5rem 0 2rem -0.2rem;
+  }
 
   h1 {
     font-size: 2rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 3rem 0 2rem 0;
   }
 
   .btn {
-    background-color: rgba(grey, 0.8);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin: 0.5rem 0rem;
-    padding: 0 60px;
-    height: 60px;
+    font-size: 1rem;
+    font-family: GreyCliff;
+    color: white;
+    background-color: $primaryColor;
+    padding: 1rem 4.5rem;
     border: none;
-    max-width: 100%;
+    border-radius: 2rem;
     &:hover,
     &:focus {
-      background-color: rgba(blue, 0.5);
+      background-color: black;
       color: white;
     }
   }
