@@ -1,0 +1,55 @@
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+.container {
+  @include tablet {
+    padding: 0 100px;
+  }
+
+  @include desktop {
+    padding: 0 10px;
+  }
+  h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  .timeContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+
+  .dateContainer {
+    display: flex;
+    gap: 20px;
+  }
+
+  .date {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  .bold {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+}

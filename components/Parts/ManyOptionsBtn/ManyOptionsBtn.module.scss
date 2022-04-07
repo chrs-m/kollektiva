@@ -1,5 +1,5 @@
-@mixin desktop {
-  @media (min-width: 1024px) {
+@mixin tablet {
+  @media (min-width: 768px) {
     @content;
   }
 }
@@ -16,7 +16,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include desktop {
+
+  @include tablet {
     width: 180px;
     height: 110px;
   }
