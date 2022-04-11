@@ -1,10 +1,94 @@
-.picture-toggle--checked .picture-toggle-check {
-  opacity: 1;
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: aqua;
-}
-.picture-toggle--checked .picture-toggle-uncheck {
-  opacity: 0;
+$sm: 350px;
+$md: 830px;
+$lg: 1200px;
+$primaryColor: #0e5657;
+$peachColor: #f88e75;
+$beigeColor: #f6ece3;
+
+.container {
+  .LabelTitle {
+    font-weight: bold;
+  }
+  .PictureContainer {
+    h2 {
+      font-weight: bold;
+      margin: 1.5rem 0;
+    }
+
+    h3 {
+      font-weight: normal;
+      span {
+        font-weight: bold;
+      }
+    }
+    .ImgWrapperLarge {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: $beigeColor;
+      border-radius: 1rem;
+      padding: 3rem 0rem;
+      margin: 1rem 0rem;
+      @media (min-width: $md) {
+        padding: 6rem 4rem;
+        margin: 2rem 0rem;
+        cursor: pointer;
+      }
+
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+
+        @media (min-width: $md) {
+          font-weight: bold;
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    .ImgWrapperContainer {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: $md) {
+        margin-bottom: 3rem;
+        gap: 1rem;
+      }
+
+      .ImgWrapper {
+        margin: 1rem 0rem;
+        padding: 1rem 1rem;
+        background-color: $beigeColor;
+        border-radius: 1rem;
+        @media (min-width: $md) {
+          padding: 2.25rem 2.25rem;
+          background-color: $beigeColor;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+
+    @media (min-width: $md) {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  small {
+    font-style: italic;
+    @media (min-width: $md) {
+      margin-left: 3rem;
+    }
+  }
 }
