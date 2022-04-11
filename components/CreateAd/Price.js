@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import styles from "../../styles/AdStyling/Price.module.scss";
 import Input from "../../components/Parts/Input";
 import Radio from "../Parts/Radio";
+import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 
 function Price({ formData, setFormData }) {
   const [counter, setCounter] = useState(2000);
@@ -10,32 +11,30 @@ function Price({ formData, setFormData }) {
     <div className={styles.container}>
       <h2>
         Baserat på inlagd information är rekommenderad hyra för ditt boende
-        <span> 7500kr</span> i månaden
+        <span> {formData["priceCounter"]} kr</span> i månaden
       </h2>
       <div className={styles.PriceContainer}>
-        <button
-          className={styles.btn}
+        <AiFillMinusCircle
+          className={styles.MinusCircle}
+          size="2.5rem"
+          color="#f88e75"
           onClick={() => {
-            if (formData.priceCounter > 2000) {
-              formData.priceCounter -= 500;
-              setFormData({ ...formData });
-            }
+            formData.priceCounter -= 500;
+            setFormData({ ...formData });
           }}
-        >
-          -
-        </button>
+        />
 
-        {/* <h1 className="">{formData["priceCounter"]}</h1> */}
-        <Input placeholder={"7500kr"} />
-        <button
-          className={styles.btn}
+        <h1 className="">{formData["priceCounter"]}</h1>
+        {/* <Input placeholder={"7500kr"} /> */}
+        <AiFillPlusCircle
+          className={styles.PlusCircle}
+          size="2.5rem"
+          color="#f88e75"
           onClick={() => {
             formData.priceCounter += 500;
             setFormData({ ...formData });
           }}
-        >
-          +
-        </button>
+        />
       </div>
       <div className={styles.included}>
         <h2>Ingår el?</h2>
@@ -46,6 +45,10 @@ function Price({ formData, setFormData }) {
           value="yes"
           for="yes"
           text="Ja"
+          onClick={() => {
+            formData.priceCounter += 300;
+            setFormData({ ...formData });
+          }}
         />
         <Radio
           type="radio"
@@ -65,6 +68,10 @@ function Price({ formData, setFormData }) {
           value="yes"
           for="yes"
           text="Ja"
+          onClick={() => {
+            formData.priceCounter += 200;
+            setFormData({ ...formData });
+          }}
         />
         <Radio
           type="radio"
@@ -84,6 +91,10 @@ function Price({ formData, setFormData }) {
           value="yes"
           for="yes"
           text="Ja"
+          onClick={() => {
+            formData.priceCounter += 250;
+            setFormData({ ...formData });
+          }}
         />
         <Radio
           type="radio"

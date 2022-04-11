@@ -30,7 +30,7 @@ function Form() {
     toiletCounter: 0,
     rentFrom: "",
     rentTo: "",
-    priceCounter: 2000,
+    priceCounter: 4500,
     adName: "",
     adDescription: "",
   });

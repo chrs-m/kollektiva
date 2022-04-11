@@ -3,6 +3,7 @@ import styles from "../../styles/AdStyling/Rentee.module.scss";
 import Textarea from "../Parts/Textarea";
 import Input from "../Parts/Input";
 import Radio from "../Parts/Radio";
+import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 
 function Rentee({ formData, setFormData }) {
   const [counter, setCounter] = useState(0);
@@ -17,8 +18,9 @@ function Rentee({ formData, setFormData }) {
         <div className={styles.singleCounter}>
           <label>Antal vuxna</label>
           <div className={styles.buttons}>
-            <button
-              className={styles.button}
+            <AiFillMinusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 if (formData.adultCounter > 0) {
                   formData.adultCounter -= 1;
@@ -27,25 +29,27 @@ function Rentee({ formData, setFormData }) {
               }}
             >
               -
-            </button>
+            </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.adultCounter}</h2>
-            <button
-              className={styles.button}
+            <AiFillPlusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 formData.adultCounter += 1;
                 setFormData({ ...formData });
               }}
             >
               +
-            </button>
+            </AiFillPlusCircle>
           </div>
         </div>
         <HorizontalLine />
         <div className={styles.singleCounter}>
           <label>Antal barn</label>
           <div className={styles.buttons}>
-            <button
-              className={styles.button}
+            <AiFillMinusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 if (formData.childCounter > 0) {
                   formData.childCounter -= 1;
@@ -54,25 +58,27 @@ function Rentee({ formData, setFormData }) {
               }}
             >
               -
-            </button>
+            </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.childCounter}</h2>
-            <button
-              className={styles.button}
+            <AiFillPlusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 formData.childCounter += 1;
                 setFormData({ ...formData });
               }}
             >
               +
-            </button>
+            </AiFillPlusCircle>
           </div>
         </div>
         <HorizontalLine />
         <div className={styles.singleCounter}>
           <label>Antal sovrum</label>
           <div className={styles.buttons}>
-            <button
-              className={styles.button}
+            <AiFillMinusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 if (formData.bedCounter > 0) {
                   formData.bedCounter -= 1;
@@ -81,25 +87,27 @@ function Rentee({ formData, setFormData }) {
               }}
             >
               -
-            </button>
+            </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.bedCounter}</h2>
-            <button
-              className={styles.button}
+            <AiFillPlusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 formData.bedCounter += 1;
                 setFormData({ ...formData });
               }}
             >
               +
-            </button>
+            </AiFillPlusCircle>
           </div>
         </div>
         <HorizontalLine />
         <div className={styles.singleCounter}>
           <label>Antal badrum</label>
           <div className={styles.buttons}>
-            <button
-              className={styles.button}
+            <AiFillMinusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 if (formData.toiletCounter > 0) {
                   formData.toiletCounter -= 1;
@@ -108,17 +116,18 @@ function Rentee({ formData, setFormData }) {
               }}
             >
               -
-            </button>
+            </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.toiletCounter}</h2>
-            <button
-              className={styles.button}
+            <AiFillPlusCircle
+              size="2.5rem"
+              color="#f88e75"
               onClick={() => {
                 formData.toiletCounter += 1;
                 setFormData({ ...formData });
               }}
             >
               +
-            </button>
+            </AiFillPlusCircle>
           </div>
         </div>
       </div>
