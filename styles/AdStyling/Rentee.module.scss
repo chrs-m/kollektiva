@@ -18,6 +18,24 @@
     align-items: center;
   }
 
+  .PlusCircle {
+    margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      fill: black;
+      cursor: pointer;
+    }
+  }
+
+  .MinusCircle {
+    margin-right: 1rem;
+    cursor: pointer;
+    &:hover {
+      fill: black;
+      cursor: pointer;
+    }
+  }
+
   .button {
     background-color: var(--input-button);
     box-shadow: 0px 8px 10px rgba(192, 190, 189, 0.17);
@@ -44,6 +62,11 @@
     border-radius: 43px;
     font-size: 16px;
     padding: 3px;
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
   }
 
   .petsContainer,

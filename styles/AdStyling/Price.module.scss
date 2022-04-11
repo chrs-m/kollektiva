@@ -18,9 +18,20 @@ $beigeColor: #f6ece3;
 
   .PlusCircle {
     margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      fill: black;
+      cursor: pointer;
+    }
   }
+
   .MinusCircle {
     margin-right: 1rem;
+    cursor: pointer;
+    &:hover {
+      fill: black;
+      cursor: pointer;
+    }
   }
 
   .PriceContainer {

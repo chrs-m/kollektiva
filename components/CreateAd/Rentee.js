@@ -19,6 +19,7 @@ function Rentee({ formData, setFormData }) {
           <label>Antal vuxna</label>
           <div className={styles.buttons}>
             <AiFillMinusCircle
+              className={styles.MinusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -32,6 +33,7 @@ function Rentee({ formData, setFormData }) {
             </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.adultCounter}</h2>
             <AiFillPlusCircle
+              className={styles.PlusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -48,6 +50,7 @@ function Rentee({ formData, setFormData }) {
           <label>Antal barn</label>
           <div className={styles.buttons}>
             <AiFillMinusCircle
+              className={styles.MinusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -61,6 +64,7 @@ function Rentee({ formData, setFormData }) {
             </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.childCounter}</h2>
             <AiFillPlusCircle
+              className={styles.PlusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -77,6 +81,7 @@ function Rentee({ formData, setFormData }) {
           <label>Antal sovrum</label>
           <div className={styles.buttons}>
             <AiFillMinusCircle
+              className={styles.MinusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -90,6 +95,7 @@ function Rentee({ formData, setFormData }) {
             </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.bedCounter}</h2>
             <AiFillPlusCircle
+              className={styles.PlusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -106,6 +112,7 @@ function Rentee({ formData, setFormData }) {
           <label>Antal badrum</label>
           <div className={styles.buttons}>
             <AiFillMinusCircle
+              className={styles.MinusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
@@ -119,6 +126,7 @@ function Rentee({ formData, setFormData }) {
             </AiFillMinusCircle>
             <h2 className={styles.h2}>{formData.toiletCounter}</h2>
             <AiFillPlusCircle
+              className={styles.PlusCircle}
               size="2.5rem"
               color="#f88e75"
               onClick={() => {
