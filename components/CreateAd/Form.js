@@ -53,8 +53,6 @@ function Form() {
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <About formData={formData} setFormData={setFormData} />;
-    } else if (page === 1) {
       return (
         <LivingInfo
           formData={formData}
@@ -62,7 +60,7 @@ function Form() {
           handleChange={handleChange}
         />
       );
-    } else if (page === 2) {
+    } else if (page === 1) {
       return (
         <TypeOfLiving
           formData={formData}
@@ -70,13 +68,13 @@ function Form() {
           handleChange={handleChange}
         />
       );
-    } else if (page === 3) {
+    } else if (page === 2) {
       return <Rentee formData={formData} setFormData={setFormData} />;
-    } else if (page === 4) {
+    } else if (page === 3) {
       return <TimePeriod formData={formData} setFormData={setFormData} />;
-    } else if (page === 5) {
+    } else if (page === 4) {
       return <Price formData={formData} setFormData={setFormData} />;
-    } else if (page === 6) {
+    } else if (page === 5) {
       return <Extras formData={formData} setFormData={setFormData} />;
     } else {
       return <Summary formData={formData} setFormData={setFormData} />;

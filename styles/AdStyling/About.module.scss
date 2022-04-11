@@ -1,103 +1,288 @@
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 .container {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // background-color: white;
-  // border-radius: 3rem;
-  // padding-left: 2rem;
+  font-family: GreyCliff;
+  overflow: hidden;
+  position: relative;
 
-  .infoButtons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .btn {
+    font-size: 1rem;
+    font-family: GreyCliff;
+    color: white;
+    background-color: var(--button-border);
+    padding: 1rem 4.5rem;
+    border: none;
+    border-radius: 2rem;
+    // margin: 0rem 1.5rem;
+    @include tablet {
+      font-size: 1.5rem;
+      font-family: GreyCliff;
+      color: white;
+      padding: 1rem 4.5rem;
+      border: none;
+      border-radius: 2rem;
+      margin: 0rem 1.5rem;
+    }
 
-    .btn {
-      background-color: white;
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-weight: bold;
-      text-align: center;
-      margin: 0.5rem 0rem;
-      padding: 1rem 1rem;
-      border: 1px solid black;
-      border-radius: 1.5rem;
-      max-width: 100%;
-      &:hover,
-      &:focus {
-        background-color: rgba(blue, 0.5);
-        color: white;
-        text-decoration: underline;
-        cursor: pointer;
+    &:hover {
+      background-color: black;
+      cursor: pointer;
+    }
+  }
+
+  .HeaderImgContainer {
+    overflow: hidden;
+
+    @include tablet {
+      height: 85vh;
+      width: 100vw;
+      background-position: center;
+    }
+    .BackgroundImage {
+      background-color: black; /* fallback color */
+      background-image: url("../../assets/img/header_image.avif");
+      background-position: center;
+      background-size: cover;
+      transform: scale(1);
+      filter: blur(1px);
+      height: 80vh;
+      margin-bottom: 30px;
+      @include tablet {
+        width: 100%;
+        height: 100%;
+        filter: blur(1px);
       }
     }
   }
 
-  .aboutWrapper {
+  .Title {
+    padding: 0 3rem;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-bottom: 4rem;
+    font-size: 43px;
+    top: 200px;
+    width: 380px;
+    left: calc(50% - 190px);
+
+    @include tablet {
+      font-size: 50px;
+      z-index: 2;
+      position: absolute;
+      width: 650px;
+      top: 250px;
+      left: calc(50% - 325px);
+    }
+
+    @include desktop {
+      font-size: 60px;
+      width: 1600px;
+      left: calc(50% - 768px);
+    }
+
     span {
+      margin-top: 10px;
+      font-weight: normal;
+      font-size: 24px;
+      color: #fdfaf8;
+      @include tablet {
+        font-size: 2.5rem;
+        // font-weight: normal;
+      }
+    }
+  }
+
+  .BtnsContainer {
+    position: absolute;
+    top: 400px;
+    left: calc(50% - 135px);
+
+    @include tablet {
       display: block;
-      font-weight: bold;
-      font-size: 2.5rem;
+      width: 700px;
+      top: 600px;
+    }
+
+    @include desktop {
+      top: 800px;
+    }
+
+    .btn {
+      margin: 1rem;
+    }
+  }
+
+  .ArrowContainer {
+    transform: translate(calc(50vw - 2rem), -2.5rem);
+
+    @include desktop {
+      margin-bottom: 70px;
+    }
+    .DownArrow {
+      font-size: 1.5rem;
+      background-color: var(--input-button);
+      padding: 1.3rem 1.5rem;
+      border-radius: 100%;
+      color: white;
+      mix-blend-mode: multiply;
+      animation: bounce2 2s ease infinite;
+
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+  }
+  .centerHeader {
+    text-align: center;
+    margin: 50px 0 20px 0;
+  }
+
+  .aboutWrapper {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    h2 {
+      margin: 0 3rem 0 0;
+      font-size: 36px;
+      margin-bottom: 20px;
+      @include desktop {
+        text-align: center;
+      }
     }
 
     p {
-      font-size: 2rem;
+      font-size: 18px;
+      line-height: 150%;
+    }
+  }
+
+  .aboutWrapper,
+  .calculateContainer {
+    @include tablet {
+      padding: 0 6rem;
+    }
+
+    @include desktop {
+      padding: 0 10rem;
+    }
+  }
+
+  .cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+
+    // @include desktop {
+    //   flex-direction: row;
+    //   flex-wrap: wrap;
+    // }
+
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+}
+.rentBtnContainer {
+  text-align: center;
+  margin-bottom: 30px;
+  .rentBtn {
+    background-color: var(--button-border);
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0rem;
+    width: 160px;
+    height: 45px;
+    border: none;
+    border-radius: 48px;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
     }
   }
 }
 
 .calculateRentWrapper {
-  background-color: rgba(purple, 0.5);
+  background-color: var(--button-border);
   border-radius: 2rem;
-  margin: 2rem;
+  margin: 0.5rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  color: #fff;
 
   h2 {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   label {
-    font-weight: bold;
     padding: 1rem 0rem 0.2rem 0rem;
   }
 
   select {
-    border-radius: 1rem;
-    padding: 0.2rem;
+    color: #767272;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
   }
 
   input {
-    border-radius: 1rem;
-    padding: 0.2rem;
+    height: 50px;
+    border-radius: 10px;
+    padding: 10px;
     border: 0.7px solid black;
   }
 }
 
 .paymentWrapper {
   margin-top: 2rem;
-  padding: 2rem;
-  border-radius: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.06),
+    inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+
+  h3 {
+    color: #5c4742;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 26px;
+    color: #000;
+  }
 
   button {
-    background-color: white;
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
+    background-color: var(--input-button);
+    font-size: 18px;
     text-align: center;
     margin: 0.5rem 0rem;
-    padding: 1rem 1rem;
-    border: 1px solid black;
-    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 48px;
     max-width: 100%;
     &:hover,
     &:focus {
@@ -107,17 +292,24 @@
       cursor: pointer;
     }
 
-    .headline {
-      font-weight: bold;
+    @include desktop {
+      font-size: 1rem;
     }
+  }
+}
 
-    .checkboxContainer {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-
-      .checkboxes {
-        margin-top: 0.5rem;
-      }
-    }
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
   }
 }
