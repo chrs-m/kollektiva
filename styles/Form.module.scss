@@ -5,16 +5,8 @@
 }
 
 .container {
-  background: -webkit-linear-gradient(
-    to bottom,
-    #93f9b9,
-    #1d976c
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #93f9b9,
-    #1d976c
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #93f9b9, #1d976c);
+  background: linear-gradient(to bottom, #93f9b9, #1d976c);
 
   @include desktop {
     display: flex;
@@ -32,7 +24,7 @@
   .formContainer {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     @include desktop {
       width: 50vw;
@@ -50,6 +42,7 @@
     @include desktop {
       border-radius: 0;
       padding: 0 50px;
+      margin-top: 2rem;
     }
   }
 }
@@ -84,7 +77,7 @@
   width: 160px;
   height: 45px;
   border: none;
-  border-radius: 8px;
+  border-radius: 2rem;
   max-width: 100%;
   &:hover {
     background-color: black;
