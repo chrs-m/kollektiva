@@ -76,11 +76,11 @@
   border: none;
   border-radius: 8px;
   max-width: 100%;
-  // &:hover,
-  // &:focus {
-  //   background-color: #b4b4b4;
-  //   color: #000;
-  // }
+  &:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .btnBack {
@@ -93,6 +93,12 @@
   margin: 0.5rem 0rem;
   text-align: center;
   font-size: 1.5rem;
+  border-radius: 8px;
+  &:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .buttons {

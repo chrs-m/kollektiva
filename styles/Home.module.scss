@@ -112,10 +112,10 @@ $beigeColor: #f6ece3;
   }
 
   .ArrowContainer {
-    transform: translate(calc(50vw - 2.7rem), -2.5rem);
+    transform: translate(calc(50vw - 2rem), -2.5rem);
 
     @media (min-width: $md) {
-      transform: translate(calc(50vw - 4rem), -2.5rem);
+      transform: translate(calc(50vw - 5rem), -2.5rem);
       // mix-blend-mode: multiply;
     }
     .DownArrow {

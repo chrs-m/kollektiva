@@ -100,6 +100,7 @@ function Form() {
             <button
               className={styles.btnBack}
               disabled={page == 0}
+              hidden={page == 0}
               onClick={() => {
                 setPage((currentPage) => currentPage - 1);
               }}
