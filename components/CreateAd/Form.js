@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../../styles/Form.module.scss";
-import About from "./About";
 import Extras from "./Extras";
 import LivingInfo from "./LivingInfo";
 import Price from "./Price";
