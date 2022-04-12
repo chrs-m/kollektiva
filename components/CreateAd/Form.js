@@ -40,7 +40,6 @@ function Form() {
   };
 
   const FormTitles = [
-    "About",
     "Hyr ut din bostad",
     "Vilken typ av boende hyr du ut?",
     "Hur många hyresgäster kan du ta emot?",
