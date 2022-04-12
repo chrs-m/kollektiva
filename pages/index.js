@@ -21,12 +21,12 @@ export default function Home() {
       </div>
       <div className={styles.BtnsContainer}>
         <button className={styles.btn}>
-          <Link href="/login">
+          <Link href="/about">
             <a>Sök bostad</a>
           </Link>
         </button>
         <button className={styles.btn}>
-          <Link href="/login">
+          <Link href="/about">
             <a>Hyr ut bostad</a>
           </Link>
         </button>
