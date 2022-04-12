@@ -38,6 +38,7 @@ $primaryColor: #0e5657;
 
     .PrimaryLinksWrapper {
       display: flex;
+      padding: 1rem;
     }
 
     li {
@@ -51,9 +52,9 @@ $primaryColor: #0e5657;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1rem 0rem 0rem 1rem;
+    padding: 1rem 0rem 0rem 0rem;
     width: 100vw;
-    height: 100vh;
+    height: 101vh;
     position: absolute;
     top: 80px;
     left: 0;
@@ -61,7 +62,7 @@ $primaryColor: #0e5657;
     list-style: none;
     transition: all 0.5s ease;
     border-radius: 0 0 2rem 2rem;
-    @media (min-width: $md) {
+    @media (min-width: $sm) {
       .PrimaryLinksWrapper {
         display: flex;
         flex-direction: column;
@@ -72,11 +73,15 @@ $primaryColor: #0e5657;
       grid-gap: 10px;
       list-style: none;
       width: 100vw;
-      height: 50vh;
+      height: 25vh;
       justify-content: space-between;
       margin-right: 2rem;
       padding-top: 3rem;
       padding-right: 30vw;
+
+      @media (min-width: $lg) {
+        height: 40vh;
+      }
     }
 
     p {
@@ -86,13 +91,16 @@ $primaryColor: #0e5657;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
       text-align: start;
+      @media (min-width: $sm) {
+        margin-top: 0rem;
+      }
     }
   }
 
   .NavLinksPrimary {
     font-size: 1.25rem;
-    // font-weight: bold;
-    padding: 0.3rem 1rem;
+    font-weight: bold;
+    padding: 0.3rem 2rem;
     width: 100%;
     display: table;
     &:hover {
@@ -161,6 +169,14 @@ $primaryColor: #0e5657;
   .SubMenu {
     @media (min-width: $md) {
       display: none;
+    }
+  }
+
+  .SubMenuWrapper {
+    padding: 1rem;
+
+    @media (min-width: $sm) {
+      padding: 0;
     }
   }
 }

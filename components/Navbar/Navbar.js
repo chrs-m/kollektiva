@@ -59,7 +59,7 @@ function Navbar() {
             })}
           </div>
           <div className={state ? styles.SubMenuActive : styles.SubMenu}>
-            <div>
+            <div className={styles.SubMenuWrapper}>
               <p>Om oss</p>
               {AboutUsSubMenuItems.map((item, index) => {
                 return (
@@ -73,7 +73,7 @@ function Navbar() {
             </div>
           </div>
           <div className={state ? styles.SubMenuActive : styles.SubMenu}>
-            <div>
+            <div className={styles.SubMenuWrapper}>
               <p>Stöd</p>
               {SupportSubMenuItems.map((item, index) => {
                 return (
