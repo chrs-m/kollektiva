@@ -27,6 +27,7 @@ a {
   box-sizing: border-box;
   margin: 0;
   font-family: "Greycliff";
+  scroll-behavior: smooth;
 }
 
 @font-face {

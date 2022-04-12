@@ -54,5 +54,11 @@ $beigeColor: #f6ece3;
     padding: 0.3rem;
     @media (min-width: $md) {
     }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

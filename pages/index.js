@@ -32,11 +32,13 @@ export default function Home() {
         </button>
       </div>
       <div className={styles.ArrowContainer}>
-        <FontAwesomeIcon icon={faArrowDown} className={styles.DownArrow} />
+        <a href="#main-section">
+          <FontAwesomeIcon icon={faArrowDown} className={styles.DownArrow} />
+        </a>
       </div>
 
       {/* MAIN SECTION STARTS HERE */}
-      <div className={styles.MainSection}>
+      <div className={styles.MainSection} id="main-section">
         <div className={styles.InfoContainer}>
           <FontAwesomeIcon
             icon={faHouseChimney}

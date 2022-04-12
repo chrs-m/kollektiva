@@ -19,11 +19,11 @@ function Footer() {
         </div>
         <div className={`${styles.Contact} ${styles.ContactEmail}`}>
           <HiOutlineMail size="2rem" />
-          <p>kollektiva@mail.se</p>
+          <a href="mailto:kollektiva@mail.se">kollektiva@mail.se</a>
         </div>
         <div className={`${styles.Contact} ${styles.ContactPhone}`}>
           <BsPhone size="2rem" />
-          <p>010 12 34 56</p>
+          <a href="tel:010123456">010 12 34 56</a>
         </div>
       </div>
     </div>
