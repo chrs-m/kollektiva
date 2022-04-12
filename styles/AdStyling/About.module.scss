@@ -1,3 +1,9 @@
+@mixin desktopL {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: 1024px) {
     @content;
@@ -84,6 +90,7 @@
     }
 
     @include desktop {
+      top: 310px;
       font-size: 60px;
       width: 1600px;
       left: calc(50% - 768px);
@@ -103,17 +110,13 @@
 
   .BtnsContainer {
     position: absolute;
-    top: 400px;
+    top: 450px;
     left: calc(50% - 135px);
 
     @include tablet {
       display: block;
       width: 700px;
-      top: 600px;
-    }
-
-    @include desktop {
-      top: 800px;
+      top: 500px;
     }
 
     .btn {
@@ -144,6 +147,14 @@
   .centerHeader {
     text-align: center;
     margin: 50px 0 20px 0;
+
+    @include tablet {
+      font-size: 36px;
+    }
+
+    @include desktop {
+      font-size: 48px;
+    }
   }
 
   .aboutWrapper {
@@ -184,16 +195,14 @@
     align-items: center;
     padding: 0 2rem;
 
-    // @include desktop {
-    //   flex-direction: row;
-    //   flex-wrap: wrap;
-    // }
-
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 0;
+    }
+
+    @include desktopL {
+      padding: 0 11rem;
     }
   }
 }
@@ -203,13 +212,19 @@
   .rentBtn {
     background-color: var(--button-border);
     color: #fff;
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     margin: 0.5rem 0rem;
     width: 160px;
     height: 45px;
     border: none;
     border-radius: 48px;
+
+    @include tablet {
+      width: 300px;
+      height: 55px;
+      font-size: 24px;
+    }
 
     &:hover {
       background-color: black;
@@ -286,7 +301,7 @@
     max-width: 100%;
     &:hover,
     &:focus {
-      background-color: rgba(green, 0.5);
+      background-color: var(--button-border);
       color: white;
       text-decoration: underline;
       cursor: pointer;
