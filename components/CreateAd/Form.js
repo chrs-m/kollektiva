@@ -46,7 +46,7 @@ function Form() {
     "Hur länge vill du hyra ut?",
     "Bestäm ditt pris på hyran",
     "Slutför din annons genom att beskriva ditt boende och ladda upp bilder",
-    "Bekräfta att allt stämmer",
+    "Kolla in din nya annons och bekräfta att allt stämmer",
   ];
 
   const PageDisplay = () => {
@@ -115,7 +115,7 @@ function Form() {
                 }
               }}
             >
-              {page === FormTitles.length - 1 ? "Skicka in" : "Nästa"}
+              {page === FormTitles.length - 1 ? "Publicera" : "Nästa"}
             </button>
           </div>
         </div>

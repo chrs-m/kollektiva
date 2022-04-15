@@ -6,6 +6,7 @@ $peachColor: #f88e75;
 $beigeColor: #f6ece3;
 
 .Container {
+  position: absolute;
   background-color: $primaryColor;
   color: white;
   display: flex;
