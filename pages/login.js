@@ -9,7 +9,7 @@ function login() {
     <div className={styles.container}>
       <Navbar />
       <LoginForm />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

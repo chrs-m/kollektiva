@@ -11,9 +11,14 @@ $beigeColor: #f6ece3;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-top: 80px;
 
   form {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   label {
     font-weight: bold;
@@ -21,6 +26,7 @@ $beigeColor: #f6ece3;
 
   input {
     margin: 0.5rem 0 2rem -0.2rem;
+    width: 250px;
   }
 
   h1 {
