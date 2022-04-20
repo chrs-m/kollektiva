@@ -8,7 +8,7 @@ function Input(props) {
   return (
     <div>
       <input
-        type="text"
+        type={props.type}
         placeholder={props.placeholder}
         className={styles.facilities}
       ></input>
@@ -20,4 +20,7 @@ function Input(props) {
   /* <Image src={plus} width={10} height={10} /> */
 }
 
+Input.defaultProps = {
+  type: "text",
+};
 export default Input;

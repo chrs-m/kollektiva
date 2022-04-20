@@ -34,7 +34,7 @@ function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           /> */}
-          <Input placeholder="din@epost.se" />
+          <Input placeholder="din@epost.se" type="email" />
         </div>
         <div className={styles.loginFormField}>
           <label className={styles.loginFormLabel}>Lösenord</label>
@@ -44,7 +44,7 @@ function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           /> */}
-          <Input placeholder="Ange ditt lösenord" />
+          <Input placeholder="Ange ditt lösenord" type="password" />
         </div>
         <div className={styles.loginFormField}>
           <button className={styles.btn}>Logga in</button>
