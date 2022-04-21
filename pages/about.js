@@ -7,6 +7,7 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
 
+
 function About() {
   return (
     <div className={styles.container}>
@@ -21,7 +22,7 @@ function About() {
       </div>
       <div className={styles.BtnsContainer}>
         <button className={styles.btn}>
-          <Link href="/signup">
+          <Link href="/login">
             <a>Hyr ut bostad</a>
           </Link>
         </button>
@@ -77,32 +78,31 @@ function About() {
         <div className={styles.cardContainer}>
           <Card
             header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
+            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter.  "
           />
           <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
+            header="Kollektiva matchar dig med rätt hyresgäst"
+            text="När du läggar upp din bostad utgår vi från personliga frågor som hjälper dig 
+            att hitta den perfekta hyresgästen. "
           />
           <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
+            header="Behöver du extra hjälp i hemmet?"
+            text="Som hyresvärd kan du önska hjälp från din hyresgäst. T.ex att ta hand om trädgård eller hjälp med att handla.  "
           />
           <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
+    
+            header="Kollektiva hanterar alla hyresbetalningar"
+            text="Som hyresvärd ansvarar du inte för betalningar mellan dig och din hyresgäst. Kollektiva sköter det åt dig."
           />
           <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
+            header="Vi är med dig under hela hyresperioden"
+            text="Vi strävar efter att ge alla våra kunder den bästa servicen. Med hjälp av tydlig kommunikation och ett anpassat tänk är vi med dig hela tiden."
           />
-          <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter. "
-          />
+         
         </div>
         <div className={styles.rentBtnContainer}>
           <button className={styles.rentBtn}>
-            <Link href="/signup">
+            <Link href="/login">
               <a>Hyr ut bostad</a>
             </Link>
           </button>
