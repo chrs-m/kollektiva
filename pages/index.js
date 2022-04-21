@@ -6,6 +6,9 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import alma from "../assets/img/imgComponent/story_alma.svg";
+import leon from "../assets/img/imgComponent/story_leon.svg";
+import carmen from "../assets/img/imgComponent/story_carmen.svg";
 
 export default function Home() {
   return (
@@ -81,12 +84,15 @@ export default function Home() {
           <div className={styles.LocationContainers}>
             <div className={`${styles.CityContainer} ${styles.Sthlm}`}>
               <h3>Stockholm</h3>
+              <p>76 lediga bostäder</p>
             </div>
             <div className={`${styles.CityContainer} ${styles.Gbg}`}>
               <h3>Göteborg</h3>
+              <p>82 lediga bostäder</p>
             </div>
             <div className={`${styles.CityContainer} ${styles.Malmo}`}>
               <h3>Malmö</h3>
+              <p>43 lediga bostäder</p>
             </div>
           </div>
           <div className={styles.BtnContainer}>
@@ -104,55 +110,9 @@ export default function Home() {
             <h2>Berättelser</h2>
           </div>
           <div className={styles.StoryContainers}>
-            <div
-              className={`${styles.IndividualStoryContainer} ${styles.StoryOne}`}
-            >
-              <div className={styles.ImgWrapper}>
-                <div
-                  className={`${styles.StoryImgContainer} ${styles.ImgOne}`}
-                ></div>
-              </div>
-              <p>
-                “När jag hyr ut min bostad vill jag att det ska kännas tryggt.
-                Med Kollektiva behöver jag inte vara orolig för att något ska gå
-                fel.”
-              </p>
-              <h3>Elsa</h3>
-              <div className={styles.Bottom}></div>
-            </div>
-            <div
-              className={`${styles.IndividualStoryContainer} ${styles.StoryTwo}`}
-            >
-              <div className={styles.ImgWrapper}>
-                <div
-                  className={`${styles.StoryImgContainer} ${styles.ImgTwo}`}
-                ></div>
-              </div>
-              <p>
-                “När jag hyr ut min bostad vill jag att det ska kännas tryggt.
-                Med Kollektiva behöver jag inte vara orolig för att något ska gå
-                fel.”
-              </p>
-              <h3>Berit & Bertil</h3>
-              <div className={styles.Bottom}></div>
-            </div>
-            <div
-              className={`${styles.IndividualStoryContainer} ${styles.StoryThree}`}
-            >
-              <div className={styles.ImgWrapper}>
-                <div
-                  className={`${styles.StoryImgContainer} ${styles.ImgThree}`}
-                ></div>
-              </div>
-
-              <p>
-                “När jag hyr ut min bostad vill jag att det ska kännas tryggt.
-                Med Kollektiva behöver jag inte vara orolig för att något ska gå
-                fel.”
-              </p>
-              <h3>Agneta</h3>
-              <div className={styles.Bottom}></div>
-            </div>
+            <Image src={leon} className={styles.story} />
+            <Image src={carmen} className={styles.story} />
+            <Image src={alma} className={styles.story} />
           </div>
           <div className={styles.StoryBtnContainer}>
             <button className={styles.btn}>
