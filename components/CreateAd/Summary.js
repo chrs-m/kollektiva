@@ -30,7 +30,7 @@ function Summary({ formData, setFormData }) {
         <DetailSummary headline="Inflytt" text="2022-05-15" />
         <DetailSummary headline="Utflytt" text="Tillsvidare" />
         <DetailSummary headline="Antal hyresgäster" text="2 vuxna" />
-        <DetailSummary headline="Husdjur tillåtet" text="" />
+        <DetailSummary headline="Husdjur tillåtet" text="Ja" />
       </div>
       <hr className={styles.lineBreak} />
       <div className={styles.detailSummary}>

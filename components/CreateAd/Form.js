@@ -108,7 +108,7 @@ function Form() {
               //   disabled={page == FormTitles.length - 1}
               onClick={() => {
                 if (page === FormTitles.length - 1) {
-                  alert("form submitted!");
+                  alert("Tack för din ansökan!");
                   console.log(formData);
                 } else {
                   setPage((currentPage) => currentPage + 1);

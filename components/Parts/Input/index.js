@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import Image from "next/image";
 import styles from "./Input.module.scss";
 
-import plus from "../../../assets/images/plus.png";
+import plus from "../../../assets/img/plus.png";
 
 function Input(props) {
   return (
@@ -16,9 +16,6 @@ function Input(props) {
   );
 }
 
-{
-  /* <Image src={plus} width={10} height={10} /> */
-}
 
 Input.defaultProps = {
   type: "text",
