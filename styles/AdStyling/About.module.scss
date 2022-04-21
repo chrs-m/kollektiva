@@ -85,12 +85,12 @@
       z-index: 2;
       position: absolute;
       width: 650px;
-      top: 250px;
+      top: 290px;
       left: calc(50% - 325px);
     }
 
     @include desktop {
-      top: 310px;
+      top: 270px;
       font-size: 60px;
       width: 1600px;
       left: calc(50% - 768px);
@@ -100,11 +100,8 @@
       margin-top: 10px;
       font-weight: normal;
       font-size: 24px;
-      color: #fdfaf8;
-      @include tablet {
-        font-size: 2.5rem;
-        // font-weight: normal;
-      }
+      
+      
     }
   }
 
@@ -146,7 +143,7 @@
   }
   .centerHeader {
     text-align: center;
-    margin: 50px 0 20px 0;
+    margin: 50px 0 40px 0;
 
     @include tablet {
       font-size: 36px;
@@ -193,12 +190,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 2rem;
+    gap: 10px;
+    margin-bottom: 20px;
 
     @include tablet {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 20px;
     }
 
     @include desktopL {

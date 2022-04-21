@@ -4,8 +4,15 @@ import Card from "../components/Parts/Card";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
+import img1 from "../assets/images/Card1.svg";
+import img2 from "../assets/images/card2.svg";
+import img3 from "../assets/images/card3.svg";
+import img4 from "../assets/images/card4.svg";
+import img5 from "../assets/images/card5.svg";
+import img6 from "../assets/images/card6.svg";
 
 
 function About() {
@@ -76,29 +83,12 @@ function About() {
         </div>
         <h2 className={styles.centerHeader}>Att hyra ut med kollektiva</h2>
         <div className={styles.cardContainer}>
-          <Card
-            header="Kollektiva hjälper dig att sätta hyra"
-            text="Vi hjälper dig att sätta rätt hyra för din bostad utifrån läge, storlek och faciliteter.  "
-          />
-          <Card
-            header="Kollektiva matchar dig med rätt hyresgäst"
-            text="När du läggar upp din bostad utgår vi från personliga frågor som hjälper dig 
-            att hitta den perfekta hyresgästen. "
-          />
-          <Card
-            header="Behöver du extra hjälp i hemmet?"
-            text="Som hyresvärd kan du önska hjälp från din hyresgäst. T.ex att ta hand om trädgård eller hjälp med att handla.  "
-          />
-          <Card
-    
-            header="Kollektiva hanterar alla hyresbetalningar"
-            text="Som hyresvärd ansvarar du inte för betalningar mellan dig och din hyresgäst. Kollektiva sköter det åt dig."
-          />
-          <Card
-            header="Vi är med dig under hela hyresperioden"
-            text="Vi strävar efter att ge alla våra kunder den bästa servicen. Med hjälp av tydlig kommunikation och ett anpassat tänk är vi med dig hela tiden."
-          />
-         
+          <Image src={img1} width="300" height="420"/>
+          <Image src={img2} width="300" height="420"/>
+          <Image src={img3} width="300" height="420"/>
+          <Image src={img4} width="300" height="420"/>
+          <Image src={img5} width="300" height="420"/>
+          <Image src={img6} width="300" height="420"/>
         </div>
         <div className={styles.rentBtnContainer}>
           <button className={styles.rentBtn}>
