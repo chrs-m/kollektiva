@@ -1,18 +1,17 @@
 import { React, useState } from "react";
 import styles from "../styles/AdStyling/About.module.scss";
-import Card from "../components/Parts/Card";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown, faHouseChimney } from "@fortawesome/free-solid-svg-icons";
-import img1 from "../assets/images/Card1.svg";
-import img2 from "../assets/images/card2.svg";
-import img3 from "../assets/images/card3.svg";
-import img4 from "../assets/images/card4.svg";
-import img5 from "../assets/images/card5.svg";
-import img6 from "../assets/images/card6.svg";
+import img1 from "../assets/img/Card1.svg";
+import img2 from "../assets/img/card2.svg";
+import img3 from "../assets/img/card3.svg";
+import img4 from "../assets/img/card4.svg";
+import img5 from "../assets/img/card5.svg";
+import img6 from "../assets/img/card6.svg";
 
 
 function About() {
@@ -86,9 +85,9 @@ function About() {
           <Image src={img1} width="300" height="420"/>
           <Image src={img2} width="300" height="420"/>
           <Image src={img3} width="300" height="420"/>
+          <Image src={img6} width="300" height="420"/>
           <Image src={img4} width="300" height="420"/>
           <Image src={img5} width="300" height="420"/>
-          <Image src={img6} width="300" height="420"/>
         </div>
         <div className={styles.rentBtnContainer}>
           <button className={styles.rentBtn}>

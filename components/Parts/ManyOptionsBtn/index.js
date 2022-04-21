@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import Image from "next/image";
 import styles from "./ManyOptionsBtn.module.scss";
-import buttonImg from "../../../assets/images/buttonImg.png";
+import buttonImg from "../../../assets/img/buttonImg.png";
 
 function ManyOptionsBtn(props) {
   return (
